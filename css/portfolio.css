@@ -153,11 +153,9 @@ body {
   border-bottom: 0.0625rem solid #3d3d3d;
   font-weight: 500;
   text-transform: uppercase;
-  /* background-color: aquamarine; */
 }
 .Header-wrapper {
   margin: auto;
-  /* background-color: bisque; */
 
   display: flex;
   flex-flow: row nowrap;
@@ -165,17 +163,13 @@ body {
   align-items: center;
 }
 .Header-logo {
-  /* background-color: red; */
 }
 .Header-img {
 }
 .Header-nav {
   width: 100%;
-  /* background-color: chartreuse; */
 }
 .Navmenu {
-  /* background-color: darkgray; */
-
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
@@ -184,20 +178,19 @@ body {
   gap: 2rem;
 }
 .Navmenu-li {
-  /* background-color: coral; */
   white-space: nowrap;
   transform: scale(1);
   transition: all 0.5s ease;
 }
 .Navmenu-li:hover {
-  color: #f06135;
   transform: scale(1.1);
+}
+.Navmenu-li:active {
+  color: #f06135;
 }
 .Navmenu-a {
 }
 .Rrss {
-  /* background-color: cyan; */
-
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
@@ -216,8 +209,10 @@ body {
   transform: scale(1);
 }
 .Rrss-svg:hover {
-  fill: #f06135;
   transform: scale(1.1);
+}
+.Rrss-svg:active {
+  fill: #f06135;
 }
 .Main {
   min-height: 100vh;
@@ -230,17 +225,17 @@ body {
 .Proyectos {
   width: 100%;
   min-height: 80vh;
-  /* background-color: red; */
+
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); */
+
   grid-gap: 3rem;
 }
 .Proyectos-section {
   width: 100%;
   height: fit-content;
-  /* background-color: red; */
+
   position: relative;
 
   animation: subeRebote 0.5s ease-out backwards;
@@ -289,7 +284,6 @@ body {
   letter-spacing: 0.125rem;
   color: #f06135;
 }
-
 .Proyectos-a {
 }
 .Proyectos-img {
@@ -338,12 +332,10 @@ body {
   padding: 2rem;
   border-top: 0.0625rem solid #3d3d3d;
   font-weight: 500;
-  /* background-color: red; */
 }
 .Footer-wrapper {
   width: 90%;
   margin: auto;
-  /* background-color: aqua; */
 
   display: flex;
   flex-flow: row nowrap;
@@ -358,20 +350,19 @@ body {
   align-items: center;
 }
 .Contacto-span {
-  /* background-color: greenyellow; */
   padding-right: 1rem;
 }
 .Mail-span {
-  /* background-color: cornsilk; */
   padding-right: 5rem;
   transition: all 0.5s ease;
   transform: scale(1);
 }
 .Mail-span:hover {
-  color: #f06135;
   transform: scale(1.05);
 }
-
+.Mail-span:active {
+  color: #f06135;
+}
 /* MEDIA QUERIES */
 @media screen and (max-width: 1800px) {
   .Proyectos {
