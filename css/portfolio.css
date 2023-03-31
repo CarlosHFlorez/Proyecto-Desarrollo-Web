@@ -1,0 +1,423 @@
+/* INICIO RESET GLOBAL */
+
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: whitesmoke;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background-color: #0f1108;
+  color: whitesmoke;
+  /* opcional */
+  /* -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; */
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+/* FIN RESET GLOBAL */
+
+.Wrapper {
+  width: 65%;
+}
+.Header {
+  width: 100%;
+  padding: 2rem 0;
+  border-bottom: 0.0625rem solid #3d3d3d;
+  font-weight: 500;
+  text-transform: uppercase;
+  /* background-color: aquamarine; */
+}
+.Header-wrapper {
+  margin: auto;
+  /* background-color: bisque; */
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.Header-logo {
+  /* background-color: red; */
+}
+.Header-img {
+}
+.Header-nav {
+  width: 100%;
+  /* background-color: chartreuse; */
+}
+.Navmenu {
+  /* background-color: darkgray; */
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10rem;
+  gap: 2rem;
+}
+.Navmenu-li {
+  /* background-color: coral; */
+  white-space: nowrap;
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+.Navmenu-li:hover {
+  color: #f06135;
+  transform: scale(1.1);
+}
+.Navmenu-a {
+}
+.Rrss {
+  /* background-color: cyan; */
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+.Rrss-li {
+}
+.Rrss-a {
+}
+.Rrss-svg {
+  padding: 0.3125rem;
+  width: 2rem;
+  height: 2rem;
+  transition: all 0.5s ease;
+  transform: scale(1);
+}
+.Rrss-svg:hover {
+  fill: #f06135;
+  transform: scale(1.1);
+}
+.Main {
+  min-height: 100vh;
+  background-color: #0f1108;
+  margin: 10rem 0;
+}
+.Main-wrapper {
+  margin: auto;
+}
+.Proyectos {
+  width: 100%;
+  min-height: 80vh;
+  /* background-color: red; */
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); */
+  grid-gap: 3rem;
+}
+.Proyectos-section {
+  width: 100%;
+  height: fit-content;
+  /* background-color: red; */
+  position: relative;
+
+  animation: subeRebote 0.5s ease-out backwards;
+}
+.Proyectos > :nth-child(1) {
+  animation-delay: 0s;
+}
+.Proyectos > :nth-child(2) {
+  animation-delay: 0.1s;
+}
+.Proyectos > :nth-child(3) {
+  animation-delay: 0.2s;
+}
+.Proyectos > :nth-child(4) {
+  animation-delay: 0.3s;
+}
+.Proyectos > :nth-child(5) {
+  animation-delay: 0.4s;
+}
+.Proyectos > :nth-child(6) {
+  animation-delay: 0.5s;
+}
+@keyframes subeRebote {
+  0% {
+    transform: translate3d(0, 100vh, 0) scaleY(2);
+  }
+  60% {
+    transform: translate3d(0, 5vh, 0) scaleY(0.9);
+  }
+  75% {
+    transform: translate3d(0, -2vh, 0) scaleY(0.95);
+  }
+  90% {
+    transform: translate3d(0, 1vh, 0) scaleY(0.985);
+  }
+  100% {
+    transform: translate3d(0, 0vh, 0);
+  }
+}
+.Portfolio-h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.125rem;
+  color: #f06135;
+}
+
+.Proyectos-a {
+}
+.Proyectos-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+
+  padding: 0.1875rem;
+  background: #0f1108;
+  border-radius: 1rem;
+
+  position: relative;
+
+  opacity: 0.25;
+  transition: all 0.5s ease;
+  transform: scale(1);
+}
+.Proyectos-img:hover {
+  padding: 0.1875rem;
+  background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
+  box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.4);
+  border-radius: 1rem;
+
+  opacity: 1;
+  transform: scale(1.05);
+}
+.Proyectos-h3 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  text-shadow: 0 0 2rem black;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 700;
+
+  position: absolute;
+  top: calc(50% - (3rem / 2));
+
+  pointer-events: none;
+}
+
+.Footer {
+  width: 100%;
+  padding: 2rem;
+  border-top: 0.0625rem solid #3d3d3d;
+  font-weight: 500;
+  /* background-color: red; */
+}
+.Footer-wrapper {
+  width: 90%;
+  margin: auto;
+  /* background-color: aqua; */
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.Copyright-span {
+}
+.Contacto-div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.Contacto-span {
+  /* background-color: greenyellow; */
+  padding-right: 1rem;
+}
+.Mail-span {
+  /* background-color: cornsilk; */
+  padding-right: 5rem;
+  transition: all 0.5s ease;
+  transform: scale(1);
+}
+.Mail-span:hover {
+  color: #f06135;
+  transform: scale(1.05);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1800px) {
+  .Proyectos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Proyectos-h3 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 1328px) {
+  .Proyectos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .Proyectos-h3 {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .Proyectos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Proyectos-h3 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .Proyectos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .Proyectos-h3 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .Proyectos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .Proyectos-h3 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .Proyectos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .Proyectos-h3 {
+    font-size: 1.5rem;
+  }
+}
