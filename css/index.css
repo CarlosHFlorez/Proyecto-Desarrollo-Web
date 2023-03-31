@@ -157,7 +157,6 @@ body {
 }
 .Header-wrapper {
   margin: auto;
-  /* background-color: bisque; */
 
   display: flex;
   flex-flow: row nowrap;
@@ -165,17 +164,13 @@ body {
   align-items: center;
 }
 .Header-logo {
-  /* background-color: red; */
 }
 .Header-img {
 }
 .Header-nav {
   width: 100%;
-  /* background-color: chartreuse; */
 }
 .Navmenu {
-  /* background-color: darkgray; */
-
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
@@ -184,21 +179,20 @@ body {
   gap: 2rem;
 }
 .Navmenu-li {
-  /* background-color: coral; */
   white-space: nowrap;
   transform: scale(1);
   transition: all 0.5s ease;
 }
 .Navmenu-li:hover {
-  color: #f06135;
   text-shadow: 0rem 0rem 1rem #f06135;
   transform: scale(1.1);
+}
+.Navmenu-li:active {
+  color: #f06135;
 }
 .Navmenu-a {
 }
 .Rrss {
-  /* background-color: cyan; */
-
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
@@ -217,23 +211,21 @@ body {
   transform: scale(1);
 }
 .Rrss-svg:hover {
-  fill: #f06135;
   filter: drop-shadow(0rem 0rem 1rem #f06135);
   transform: scale(1.1);
 }
+.Rrss-svg:active {
+  fill: #f06135;
+}
 .Main {
   min-height: 160vh;
-  /* background-color: #0f1108; */
-  /* padding: 10rem 0; */
 }
 .Main-wrapper {
   margin: auto;
-  /* overflow: hidden; */
 }
 .Hero {
   width: 100%;
   padding: 10rem 0;
-  /* background-color: cadetblue; */
 
   display: flex;
   flex-flow: column wrap;
@@ -243,7 +235,6 @@ body {
   overflow: hidden;
 }
 .Hero-p {
-  /* background-color: red; */
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 500;
@@ -252,7 +243,6 @@ body {
   animation: up 0.75s ease-out;
 }
 .Hero-h1 {
-  /* background-color: red; */
   font-size: 6rem;
   font-weight: 700;
   animation: up 1s ease-out;
@@ -316,7 +306,6 @@ body {
 .Footer-wrapper {
   width: 90%;
   margin: auto;
-  /* background-color: aqua; */
 
   display: flex;
   flex-flow: row nowrap;
@@ -331,17 +320,17 @@ body {
   align-items: center;
 }
 .Contacto-span {
-  /* background-color: greenyellow; */
   padding-right: 1rem;
 }
 .Mail-span {
-  /* background-color: cornsilk; */
   padding-right: 5rem;
   transition: all 0.5s ease;
   transform: scale(1);
 }
 .Mail-span:hover {
-  color: #f06135;
   text-shadow: 0rem 0rem 1rem #f06135;
   transform: scale(1.05);
+}
+.Mail-span:active {
+  color: #f06135;
 }
