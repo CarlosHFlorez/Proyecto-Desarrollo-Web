@@ -247,37 +247,6 @@ body {
   font-weight: 700;
   animation: up 1s ease-out;
 }
-.Demo-img {
-  width: 100%;
-  max-width: 100%;
-  border-radius: 0.5rem;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  opacity: 1;
-  transition: all 0.5s ease;
-
-  z-index: 1;
-}
-.Demo-img:hover {
-  opacity: 0;
-}
-.Demo-video {
-  width: 100%;
-  max-width: 100%;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.Demo-video.isActive {
-  padding: 0.1875rem;
-  border-radius: 0.5rem;
-  background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
-  box-shadow: 0rem 0rem 8rem 2rem rgba(236, 180, 28, 0.1);
-}
 .Hero-about {
   margin-top: 3rem;
   padding-bottom: 9rem;
