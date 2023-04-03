@@ -220,6 +220,15 @@ body {
 .Main {
   min-height: 160vh;
 }
+.Main-container{
+  width:100%;
+  height: 100vh;
+}
+.Main-iframe{
+  width:100%;
+  height:100%;
+  transform: scale(1.6);
+}
 .Main-wrapper {
   margin: auto;
 }
