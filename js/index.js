@@ -54,13 +54,14 @@ galeriaBtn.forEach((eachBtn, i) => {
     galeriaCont.style.transform = `translateX(${operacion}%)`;
   });
 });
-  const fragmento = document.createDocumentFragment();
-  const firstImg = document.createElement(`img`);
-  firstImg.classList.add(`Galeria-img`);
-  firstImg.setAttribute(`src`, `assets/img/posada-portrait.jpg`);
-  firstImg.setAttribute(`alt`, `Posada2`);
+const fragmento = document.createDocumentFragment();
+const firstImg = document.createElement(`img`);
 
-  fragmento.appendChild(firstImg);
+firstImg.setAttribute(`src`, `assets/img/posada-portrait.jpg`);
+firstImg.setAttribute(`alt`, `Posada2`);
+firstImg.classList.add(`Galeria-img`);
 
-  const elementImg = document.getElementsByClassName(`Galeria-container`);
-  elementImg.appendChild(fragmento);
+fragmento.appendChild(firstImg);
+
+const elementImg = document.getElementsByClassName(`Galeria-container`);
+document.body.appendChild(fragmento);
