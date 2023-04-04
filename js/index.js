@@ -54,7 +54,6 @@ galeriaBtn.forEach((eachBtn, i) => {
     galeriaCont.style.transform = `translateX(${operacion}%)`;
   });
 });
-if ((contador = 5)) {
   const fragmento = document.createDocumentFragment();
   const firstImg = document.createElement(`img`);
   firstImg.classList.add(`Galeria-img`);
@@ -65,4 +64,3 @@ if ((contador = 5)) {
 
   const elementImg = document.getElementsByClassName(`Galeria-container`);
   elementImg.appendChild(fragmento);
-}
