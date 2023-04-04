@@ -63,5 +63,5 @@ firstImg.classList.add(`Galeria-img`);
 
 fragmento.appendChild(firstImg);
 
-const elementImg = document.getElementsByClassName(`Galeria-container`);
-document.body.appendChild(fragmento);
+let elementImg = document.getElementsByClassName(`Galeria-container`);
+elementImg.appendChild(fragmento);
