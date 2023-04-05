@@ -145,7 +145,7 @@ body {
 /* FIN RESET GLOBAL */
 
 .Wrapper {
-  width: 65%;
+  width: 80%;
 }
 .Header {
   width: 100%;
@@ -172,6 +172,10 @@ body {
 }
 .Header-nav {
   width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
 }
 .Navmenu {
   display: flex;
@@ -220,22 +224,41 @@ body {
 .Rrss-svg:active {
   fill: #f06135;
 }
+.Header-btn {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 3rem;
+  display: none;
+}
+.Header-btn.isActive {
+}
+.Header-svg {
+  margin-left: 3rem;
+  fill: whitesmoke;
+}
 .Main {
+  width: 100%;
   min-height: 160vh;
 }
 .Main-container {
   width: 100%;
-  height: 100vh;
+  min-height: 70vh;
 
   position: relative;
   overflow: hidden;
 
   pointer-events: none;
 }
-.Main-iframe {
+.Main-video {
   width: 100%;
   height: 100%;
-  transform: scale(1.6);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  object-fit: cover;
+  opacity: 0.5;
 }
 .Main-wrapper {
   margin: auto;
@@ -243,9 +266,7 @@ body {
 }
 .Hero {
   width: 100%;
-  padding: 160px 0;
-
-  margin-top: -900px;
+  padding: 10rem 0;
 
   display: flex;
   flex-flow: column wrap;
@@ -253,30 +274,30 @@ body {
   align-items: flex-start;
 
   position: absolute;
-  top: 0;
+  top: -70vh;
   left: 0;
 
   z-index: 1;
 }
 .Hero-p {
   text-transform: uppercase;
-  font-size: 19.2px;
+  font-size: 1.2rem;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
   color: #f06135;
   animation: up 0.75s ease-out;
 }
 .Hero-h1 {
-  font-size: 96px;
+  font-size: 6rem;
   font-weight: 700;
   animation: up 1s ease-out;
 }
 .Hero-about {
-  margin-top: 48px;
-  padding-bottom: 144px;
-  font-size: 32px;
+  margin-top: 3rem;
+  padding-bottom: 9rem;
+  font-size: 2rem;
   font-weight: 300;
-  line-height: 45px;
+  line-height: 2.8125rem;
   animation: up 1.25s ease-out;
 }
 @keyframes up {
@@ -300,25 +321,21 @@ body {
 }
 .Galeria-container {
   width: 200%;
+
   padding: 10rem 0 0 0;
 
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-
-  gap: 1rem;
-  /* background-color: orange; */
 }
 .Galeria-img {
   width: calc(100% / 6);
   min-height: 10vh;
-  border-radius: 1rem;
   pointer-events: none;
 }
 .Galeria-ul {
   width: 100%;
-  /* background-color: blue; */
   padding: 1rem;
 
   display: flex;
@@ -338,14 +355,14 @@ body {
   gap: 2rem;
 }
 .Galeria-arrow {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   background-color: white;
   border-radius: 50%;
   padding: 0.5rem;
 
   position: absolute;
-  top: calc(50% + 2rem);
+  top: calc(50% + 1.5rem);
 
   cursor: pointer;
   transform: scale(1);
@@ -367,13 +384,13 @@ body {
   background-color: #f06135;
 }
 .next {
-  right: 5%;
+  right: 2%;
 }
 .Galeria-svg {
   fill: black;
 }
 .prev {
-  left: 5%;
+  left: 2%;
 }
 
 .Footer {
@@ -384,12 +401,12 @@ body {
   background-color: #0f1108;
 }
 .Footer-wrapper {
-  width: 90%;
   margin: auto;
 
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
 }
 .Copyright-span {
 }
@@ -398,6 +415,7 @@ body {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  margin-left: 5rem;
 }
 .Contacto-span {
   padding-right: 16px;
@@ -416,8 +434,60 @@ body {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 87.5rem) {
+@media screen and (max-width: 75rem) {
   .Navmenu {
     display: none;
+  }
+  .Header-btn {
+    display: block;
+  }
+}
+@media screen and (max-width: 64rem) {
+  body {
+    font-size: 85%;
+  }
+  .Footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Contacto-span {
+    padding: 2rem 0;
+  }
+  .Mail-span {
+    padding: 2rem 0;
+  }
+  .Contacto-div {
+    margin-left: 0rem;
+  }
+  .Hero-p {
+    font-size: 18px;
+  }
+  .Hero-h1 {
+    font-size: 48px;
+  }
+  .Hero-about {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 48rem) {
+  body {
+    font-size: 70%;
+  }
+  .Rrss {
+    display: none;
+  }
+  .Hero-p {
+    font-size: 12px;
+  }
+  .Hero-h1 {
+    font-size: 24px;
+  }
+  .Hero-about {
+    font-size: 18px;
+  }
+  .Galeria-arrow {
+    width: 2rem;
+    height: 2rem;
+    top: calc(50% + 2rem);
   }
 }

@@ -15,6 +15,7 @@ arrowNext.addEventListener(`click`, () => {
   contador++;
   let operacion = contador * -(100 / 6);
   galeriaCont.style.transform = `translateX(${operacion}%)`;
+  galeriaCont.style.transition = `all 0.5s ease`;
   console.log(contador);
   if (contador >= 6) {
     contador = 0;
@@ -31,6 +32,7 @@ arrowPrev.addEventListener(`click`, () => {
   contador--;
   let operacion = contador * -(100 / 6);
   galeriaCont.style.transform = `translateX(${operacion}%)`;
+  galeriaCont.style.transition = `all 0.5s ease`;
   console.log(contador);
   if (contador <= -1) {
     contador = 5;
@@ -54,14 +56,3 @@ galeriaBtn.forEach((eachBtn, i) => {
     galeriaCont.style.transform = `translateX(${operacion}%)`;
   });
 });
-const fragmento = document.createDocumentFragment();
-const firstImg = document.createElement(`img`);
-
-firstImg.setAttribute(`src`, `assets/img/posada-portrait.jpg`);
-firstImg.setAttribute(`alt`, `Posada2`);
-firstImg.classList.add(`Galeria-img`);
-
-fragmento.appendChild(firstImg);
-
-const elementImg = document.getElementsByClassName(`Galeria-container`);
-document.body.appendChild(fragmento);
