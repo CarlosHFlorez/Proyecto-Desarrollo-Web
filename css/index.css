@@ -247,7 +247,7 @@ body {
 }
 .Main {
   width: 100%;
-  min-height: 175vh;
+  min-height: 200vh;
 }
 .Main-container {
   width: 100%;
@@ -403,7 +403,7 @@ body {
 }
 .Galeria-div {
   width: 100%;
-  margin: 5rem 0 0 0;
+  margin: 5rem 0;
   padding: 2rem 0;
 
   display: flex;
@@ -431,8 +431,10 @@ body {
   box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.4);
   border: 0.1875rem solid whitesmoke;
 
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
+
   cursor: pointer;
 }
 .Galeria-portfolio-btn:active {
@@ -492,12 +494,20 @@ body {
 }
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 100rem) {
+  .Main {
+    min-height: 185vh;
+  }
+}
 @media screen and (max-width: 75rem) {
   .Navmenu {
     display: none;
   }
   .Header-btn {
     display: block;
+  }
+  .Main {
+    min-height: 175vh;
   }
 }
 @media screen and (max-width: 64rem) {
@@ -529,6 +539,9 @@ body {
   }
   .Galeria-h2 {
     font-size: 3rem;
+  }
+  .Galeria-div {
+    margin: 0;
   }
   .Galeria-p {
     font-size: 1rem;
@@ -567,11 +580,14 @@ body {
     width: 1rem;
     height: 1rem;
   }
+  .Galeria-div {
+    margin: 0;
+  }
   .Galeria-p {
     font-size: 0.8rem;
     line-height: 1.2rem;
   }
   .Main {
-    min-height: 155vh;
+    min-height: 150vh;
   }
 }
