@@ -378,11 +378,11 @@ body {
 
   cursor: pointer;
   transform: scale(1);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
   z-index: 1;
 }
 .Galeria-arrow:hover {
-  border: 0.1875rem solid whitesmoke;
+  border: 2px solid whitesmoke;
 }
 .Galeria-arrow:active {
   transform: scale(1.1);
@@ -397,8 +397,8 @@ body {
   cursor: pointer;
 }
 .Galeria-btn.isActive {
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
   border: 0.125rem solid whitesmoke;
 }
 .Galeria-div {
@@ -420,17 +420,22 @@ body {
   color: whitesmoke;
   border-radius: 5rem;
   font-size: 1rem;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 .Galeria-portfolio-btn:hover {
   padding: 1.05rem 2.1rem;
   font-size: 1.2rem;
+  font-weight: 700;
   letter-spacing: 0.1rem;
   border: 0.1875rem solid whitesmoke;
   background-color: #f06135;
   color: whitesmoke;
   box-shadow: #f06135 0rem 0rem 1rem;
   cursor: pointer;
+}
+.Galeria-portfolio-btn:active {
+  background-color: transparent;
 }
 .next {
   right: 2%;
