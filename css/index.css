@@ -149,8 +149,8 @@ body {
 }
 .Header {
   width: 100%;
-  padding: 32px 0;
-  border-bottom: 1px solid #3d3d3d;
+  padding: 2rem 0;
+  border-bottom: 0.0625rem solid #3d3d3d;
   font-weight: 500;
   text-transform: uppercase;
   background-color: #0f1108;
@@ -181,8 +181,8 @@ body {
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 160px;
-  gap: 32px;
+  padding-right: 10rem;
+  gap: 2rem;
 }
 .Navmenu-li {
   white-space: nowrap;
@@ -190,7 +190,7 @@ body {
   transition: all 0.5s ease;
 }
 .Navmenu-li:hover {
-  text-shadow: 0px 0px 16px #f06135;
+  text-shadow: 0rem 0rem 1rem #f06135;
 }
 .Navmenu-li:active {
   color: #f06135;
@@ -198,7 +198,7 @@ body {
 .Navmenu-li::after {
   content: "";
   width: 0%;
-  height: 2px;
+  height: 0.125rem;
   background: #f06135;
   display: block;
   transition: all 0.3s ease;
@@ -213,14 +213,14 @@ body {
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 }
 .Rrss-li {
 }
 .Rrss-a {
 }
 .Rrss-svg {
-  padding: 5px;
+  padding: 0.3125rem;
   width: 2rem;
   height: 2rem;
   transition: all 0.5s ease;
@@ -234,8 +234,8 @@ body {
   fill: #f06135;
 }
 .Header-btn {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   margin-right: 3rem;
   display: none;
 }
@@ -247,7 +247,7 @@ body {
 }
 .Main {
   width: 100%;
-  min-height: 200vh;
+  min-height: 175vh;
 }
 .Main-container {
   width: 100%;
@@ -302,9 +302,10 @@ body {
   animation: up 1s ease-out;
 }
 .Hero-about {
+  width: 70%;
   margin-top: 3rem;
   padding-bottom: 9rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 300;
   line-height: 2.8125rem;
   animation: up 1.25s ease-out;
@@ -402,7 +403,8 @@ body {
 }
 .Galeria-div {
   width: 100%;
-  margin: 5rem 0;
+  margin: 5rem 0 0 0;
+  padding: 2rem 0;
 
   display: flex;
   flex-flow: column;
@@ -411,11 +413,12 @@ body {
 }
 .Galeria-p {
   font-size: 1.25rem;
+  line-height: 2rem;
 }
 .Galeria-portfolio-btn {
-  padding: 1rem 2rem;
-  margin: 3rem 0;
-  background-color: #f06135;
+  padding: 0.6rem 1.2rem;
+  margin: 3rem 0 0 0;
+  background: #f06135;
   color: whitesmoke;
   border-radius: 5rem;
   font-size: 1rem;
@@ -423,18 +426,17 @@ body {
   transition: all 0.3s ease;
 }
 .Galeria-portfolio-btn:hover {
-  padding: 1.05rem 2.1rem;
-  font-size: 1.2rem;
+  padding: 0.7rem 1.3rem;
+  background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
+  box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.4);
+  border: 0.1875rem solid whitesmoke;
+
   font-weight: 700;
   letter-spacing: 0.1rem;
-  border: 0.1875rem solid whitesmoke;
-  background-color: #f06135;
-  color: whitesmoke;
-  box-shadow: #f06135 0rem 0rem 1rem;
   cursor: pointer;
 }
 .Galeria-portfolio-btn:active {
-  background-color: transparent;
+  background: transparent;
 }
 .next {
   right: 2%;
@@ -522,10 +524,18 @@ body {
     font-size: 3rem;
   }
   .Hero-about {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
   }
   .Galeria-h2 {
     font-size: 3rem;
+  }
+  .Galeria-p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .Main {
+    min-height: 165vh;
   }
 }
 @media screen and (max-width: 48rem) {
@@ -539,10 +549,11 @@ body {
     font-size: 0.75rem;
   }
   .Hero-h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .Hero-about {
     font-size: 1.125rem;
+    line-height: 2rem;
   }
   .Galeria-arrow {
     width: 2rem;
@@ -555,5 +566,12 @@ body {
   .Galeria-svg {
     width: 1rem;
     height: 1rem;
+  }
+  .Galeria-p {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+  .Main {
+    min-height: 155vh;
   }
 }
