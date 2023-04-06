@@ -164,7 +164,6 @@ body {
   align-items: center;
 }
 .Header-logo {
-  /* background-color: aqua; */
 }
 .Header-img {
   width: 100%;
@@ -324,8 +323,6 @@ body {
 .Galeria-section {
   margin: auto;
   max-width: 120rem;
-  /* position: relative; */
-  /* background-color: red; */
 
   overflow: hidden;
 }
@@ -336,7 +333,7 @@ body {
 }
 .Galeria-container {
   width: 100%;
-  height:100%;
+  height: 100%;
   position: relative;
 }
 .Galeria-container-img {
@@ -363,7 +360,6 @@ body {
 .Galeria-li {
   width: 2rem;
   height: 2rem;
-  /* background-color: lime; */
 
   display: flex;
   flex-flow: row nowrap;
