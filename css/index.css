@@ -149,8 +149,8 @@ body {
 }
 .Header {
   width: 100%;
-  padding: 2rem 0;
-  border-bottom: 0.0625rem solid #3d3d3d;
+  padding: 32px 0;
+  border-bottom: 1px solid #3d3d3d;
   font-weight: 500;
   text-transform: uppercase;
   background-color: #0f1108;
@@ -181,8 +181,8 @@ body {
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 10rem;
-  gap: 2rem;
+  padding-right: 160px;
+  gap: 32px;
 }
 .Navmenu-li {
   white-space: nowrap;
@@ -190,7 +190,7 @@ body {
   transition: all 0.5s ease;
 }
 .Navmenu-li:hover {
-  text-shadow: 0rem 0rem 1rem #f06135;
+  text-shadow: 0px 0px 16px #f06135;
 }
 .Navmenu-li:active {
   color: #f06135;
@@ -198,7 +198,7 @@ body {
 .Navmenu-li::after {
   content: "";
   width: 0%;
-  height: 0.125rem;
+  height: 2px;
   background: #f06135;
   display: block;
   transition: all 0.3s ease;
@@ -213,14 +213,14 @@ body {
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
-  gap: 1rem;
+  gap: 16px;
 }
 .Rrss-li {
 }
 .Rrss-a {
 }
 .Rrss-svg {
-  padding: 0.3125rem;
+  padding: 5px;
   width: 2rem;
   height: 2rem;
   transition: all 0.5s ease;
@@ -234,15 +234,15 @@ body {
   fill: #f06135;
 }
 .Header-btn {
-  width: 48px;
-  height: 48px;
-  margin-right: 48px;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 3rem;
   display: none;
 }
 .Header-btn.isActive {
 }
 .Header-svg {
-  margin-left: 48px;
+  margin-left: 3rem;
   fill: whitesmoke;
 }
 .Main {
@@ -275,7 +275,7 @@ body {
 }
 .Hero {
   width: 100%;
-  padding: 160px 0;
+  padding: 10rem 0;
 
   display: flex;
   flex-flow: column wrap;
@@ -290,23 +290,23 @@ body {
 }
 .Hero-p {
   text-transform: uppercase;
-  font-size: 19.2px;
+  font-size: 1.2rem;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
   color: #f06135;
   animation: up 0.75s ease-out;
 }
 .Hero-h1 {
-  font-size: 96px;
+  font-size: 6rem;
   font-weight: 700;
   animation: up 1s ease-out;
 }
 .Hero-about {
-  margin-top: 48px;
-  padding-bottom: 144px;
-  font-size: 32px;
+  margin-top: 3rem;
+  padding-bottom: 9rem;
+  font-size: 2rem;
   font-weight: 300;
-  line-height: 45px;
+  line-height: 2.8125rem;
   animation: up 1.25s ease-out;
 }
 @keyframes up {
@@ -452,7 +452,7 @@ body {
 .Footer {
   width: 100%;
   padding: 2rem;
-  border-top: 1px solid #3d3d3d;
+  border-top: 0.0625rem solid #3d3d3d;
   font-weight: 500;
   background-color: #0f1108;
 }
@@ -471,7 +471,7 @@ body {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  margin-left: 80px;
+  margin-left: 5rem;
 }
 .Contacto-span {
   padding-right: 1rem;
@@ -490,7 +490,7 @@ body {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 75rem) {
   .Navmenu {
     display: none;
   }
@@ -498,7 +498,7 @@ body {
     display: block;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64rem) {
   body {
     font-size: 85%;
   }
@@ -507,13 +507,13 @@ body {
     align-items: center;
   }
   .Contacto-span {
-    padding: 32px 0;
+    padding: 2rem 0;
   }
   .Mail-span {
-    padding: 32px 0;
+    padding: 2rem 0;
   }
   .Contacto-div {
-    margin-left: 0px;
+    margin-left: 0rem;
   }
   .Hero-p {
     font-size: 1.125rem;
@@ -528,7 +528,7 @@ body {
     font-size: 3rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
   body {
     font-size: 70%;
   }
