@@ -3,7 +3,7 @@
 //SCRIPT PARA LA GALERÍA DE IMÁGENES DE INDEX.HMTL
 
 //Seleccionamos los objetos implicados
-const galeriaCont = document.querySelector(`.Galeria-container`);
+const galeriaCont = document.querySelector(`.Galeria-container-img`);
 const arrowNext = document.querySelector(`.next`);
 const arrowPrev = document.querySelector(`.prev`);
 const galeriaImg = document.querySelectorAll(`.Galeria-img`);

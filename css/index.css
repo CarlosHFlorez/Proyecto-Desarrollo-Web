@@ -192,10 +192,20 @@ body {
 }
 .Navmenu-li:hover {
   text-shadow: 0rem 0rem 1rem #f06135;
-  transform: scale(1.1);
 }
 .Navmenu-li:active {
   color: #f06135;
+}
+.Navmenu-li::after {
+  content: "";
+  width: 0%;
+  height: 0.125rem;
+  background: #f06135;
+  display: block;
+  transition: all 0.5s ease;
+}
+.Navmenu-li:hover::after {
+  width: 100%;
 }
 .Navmenu-a {
 }
@@ -313,21 +323,24 @@ body {
 
 .Galeria-section {
   margin: auto;
-  max-width: 1920px;
-  position: relative;
-  overflow: hidden;
-
+  max-width: 120rem;
+  /* position: relative; */
   /* background-color: red; */
+
+  overflow: hidden;
 }
 .Galeria-h2 {
   font-size: 4rem;
   text-align: center;
-  margin-top: 5rem;
+  margin: 5rem 0 2rem 0;
 }
 .Galeria-container {
+  width: 100%;
+  height:100%;
+  position: relative;
+}
+.Galeria-container-img {
   width: 200%;
-
-  padding: 5rem 0 0 0;
 
   display: flex;
   flex-flow: row nowrap;
@@ -336,12 +349,11 @@ body {
 }
 .Galeria-img {
   width: calc(100% / 6);
-  min-height: 10vh;
   pointer-events: none;
 }
 .Galeria-ul {
   width: 100%;
-  padding: 16px;
+  padding: 1rem;
 
   display: flex;
   flex-flow: row nowrap;
@@ -349,25 +361,25 @@ body {
   align-items: center;
 }
 .Galeria-li {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   /* background-color: lime; */
 
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 2rem;
 }
 .Galeria-arrow {
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
   background-color: #f06135;
   border-radius: 50%;
-  padding: 8px;
+  padding: 0.5rem;
 
   position: absolute;
-  top: calc(50% + 24px);
+  top: calc(50% - (3rem / 2));
 
   cursor: pointer;
   transform: scale(1);
@@ -376,14 +388,14 @@ body {
 }
 .Galeria-arrow:hover {
   transition: all 0.3s ease;
-  border: 3px solid whitesmoke;
+  border: 0.1875rem solid whitesmoke;
 }
 .Galeria-arrow:active {
   transform: scale(1.1);
 }
 .Galeria-btn {
-  width: 10px;
-  height: 10px;
+  width: 0.625rem;
+  height: 0.625rem;
   border-radius: 50%;
   background-color: #f06135;
   transition: all 0.3s ease;
@@ -391,9 +403,40 @@ body {
   cursor: pointer;
 }
 .Galeria-btn.isActive {
-  width: 16px;
-  height: 16px;
-  border: 2px solid whitesmoke;
+  width: 1rem;
+  height: 1rem;
+  border: 0.125rem solid whitesmoke;
+}
+.Galeria-div {
+  width: 100%;
+  margin: 5rem 0;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.Galeria-p {
+  font-size: 1.25rem;
+}
+.Galeria-portfolio-btn {
+  padding: 1rem 2rem;
+  margin: 3rem 0;
+  background-color: #f06135;
+  color: whitesmoke;
+  border-radius: 5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.Galeria-portfolio-btn:hover {
+  padding: 1.05rem 2.1rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  border: 0.1875rem solid whitesmoke;
+  background-color: #f06135;
+  color: whitesmoke;
+  box-shadow: #f06135 0rem 0rem 1rem;
+  cursor: pointer;
 }
 .next {
   right: 2%;

@@ -67,6 +67,7 @@
               </a>
             </li>
           </ul>
+
           <button class="Header-btn">
             <svg class="Header-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
@@ -75,12 +76,14 @@
         </nav>
       </div>
     </header>
+
     <main class="Main">
       <div class="Main-container">
         <video class="Main-video" loop muted autoplay playsinline>
           <source src="assets/video/Dragon Age Hero720_handBrake.mp4" type="video/mp4" />
         </video>
       </div>
+
       <div class="Main-wrapper Wrapper">
         <section class="Main-section Hero">
           <p class="Hero-p">Hola, soy Carlos</p>
@@ -88,15 +91,31 @@
           <p class="Hero-about">Soy un Artista 3D Freelance especializado en videojuegos y visualización de productos. También escribo artículos para mi blog y creo contenido para YouTube.</p>
         </section>
       </div>
+
       <section class="Galeria-section Wrapper">
         <h2 class="Galeria-h2">Galería de Proyectos</h2>
+
         <div class="Galeria-container">
-          <img src="assets/img/posada-portrait.jpg" alt="Posada" class="Galeria-img" />
-          <img src="assets/img/pistola-portrait.jpg" alt="Pistola" class="Galeria-img" />
-          <img src="assets/img/ripster-portrait.jpg" alt="Ripster" class="Galeria-img" />
-          <img src="assets/img/cofre-portrait.jpg" alt="Cofre" class="Galeria-img" />
-          <img src="assets/img/estatua-portrait.jpg" alt="Estatua" class="Galeria-img" />
-          <img src="assets/img/hachas-portrait.jpg" alt="Hachas" class="Galeria-img" />
+          <div class="Galeria-container-img">
+            <img src="assets/img/posada-portrait.jpg" alt="Posada" class="Galeria-img" />
+            <img src="assets/img/pistola-portrait.jpg" alt="Pistola" class="Galeria-img" />
+            <img src="assets/img/ripster-portrait.jpg" alt="Ripster" class="Galeria-img" />
+            <img src="assets/img/cofre-portrait.jpg" alt="Cofre" class="Galeria-img" />
+            <img src="assets/img/estatua-portrait.jpg" alt="Estatua" class="Galeria-img" />
+            <img src="assets/img/hachas-portrait.jpg" alt="Hachas" class="Galeria-img" />
+          </div>
+
+          <button class="Galeria-arrow prev">
+            <svg class="Galeria-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+            </svg>
+          </button>
+
+          <button class="Galeria-arrow next">
+            <svg class="Galeria-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
         </div>
 
         <ul class="Galeria-ul">
@@ -120,26 +139,22 @@
           </li>
         </ul>
 
-        <button class="Galeria-arrow prev">
-          <svg class="Galeria-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-          </svg>
-        </button>
-
-        <button class="Galeria-arrow next">
-          <svg class="Galeria-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-          </svg>
-        </button>
+        <div class="Galeria-div">
+          <p class="Galeria-p">El software con el que trabajo es Maya, Zbrush y Substance Painter fundamentalmente, aunque si eres un estudio indie, estaré encantado de trabajar con Blender igualmente. Los renders de assets y personajes para videojuegos están hechos en Marmoset Toolbag, pueden ser visualizados junto con la descripción completa del proyecto en la sección de Portfolio.</p>
+          <button class="Galeria-portfolio-btn"><a href="portfolio.html" class="Galeria-portfolio-a">Ver Portfolio</a></button>
+        </div>
       </section>
     </main>
+
     <footer class="Footer">
       <div class="Footer-wrapper Wrapper">
         <span class="Copyright-span">Copyright © 2023 - Carlos Hernández Flórez</span>
+
         <div class="Contacto-div">
           <span class="Contacto-span">Contacto:</span>
           <span class="Mail-span"><a href="mailto:">carlos.cgdesigner@gmail.com</a></span>
         </div>
+
         <ul class="Footer-ul Rrss">
           <li class="Rrss-li">
             <a href="https://www.linkedin.com/" class="Rrss-a">
