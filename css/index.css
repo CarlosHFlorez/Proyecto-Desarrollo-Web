@@ -163,6 +163,13 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.Header-grp {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
 .Header-logo {
 }
 .Header-img {
@@ -170,18 +177,20 @@ body {
   height: 100%;
 }
 .Header-nav {
-  width: 100%;
+}
+.Header-responsive {
+  margin-left: 5rem;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  gap: 5rem;
 }
 .Navmenu {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 10rem;
   gap: 2rem;
 }
 .Navmenu-li {
@@ -234,12 +243,10 @@ body {
   fill: #f06135;
 }
 .Header-btn {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   margin-right: 3rem;
   display: none;
-}
-.Header-btn.isActive {
 }
 .Header-svg {
   margin-left: 3rem;
@@ -275,16 +282,19 @@ body {
 }
 .Hero {
   width: 100%;
-  padding: 10rem 0;
-
+  min-height: 70vh;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: flex-start;
+
+  gap: 1rem;
 
   position: absolute;
   top: -70vh;
   left: 0;
+
+  overflow: hidden;
 
   z-index: 1;
 }
@@ -303,12 +313,32 @@ body {
 }
 .Hero-about {
   width: 70%;
-  margin-top: 3rem;
-  padding-bottom: 9rem;
   font-size: 1.8rem;
   font-weight: 300;
   line-height: 2.8125rem;
   animation: up 1.25s ease-out;
+}
+.Hero-a {
+  margin: 0 auto;
+  animation: up 1.5s ease-out;
+}
+.Hero-btn {
+  padding: 1rem 2rem;
+  margin-top: 5vh;
+  background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
+  color: whitesmoke;
+  border: 0.125rem solid whitesmoke;
+  border-radius: 5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.Hero-btn:hover {
+  box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.5);
+  cursor: pointer;
+}
+.Hero-btn:active {
+  background: transparent;
 }
 @keyframes up {
   0% {
@@ -334,7 +364,6 @@ body {
 }
 .Galeria-container {
   width: 100%;
-  background-color: red;
   position: relative;
 }
 .Galeria-container-img {
@@ -371,7 +400,8 @@ body {
 .Galeria-arrow {
   width: 3rem;
   height: 3rem;
-  background-color: #f06135;
+  border: 0.125rem solid whitesmoke;
+  background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
   border-radius: 50%;
 
   position: absolute;
@@ -382,7 +412,7 @@ body {
   z-index: 1;
 }
 .Galeria-arrow:hover {
-  border: 0.125rem solid whitesmoke;
+  box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.4);
 }
 .Galeria-arrow:active {
   transform: scale(1.1);
@@ -391,10 +421,18 @@ body {
   width: 0.625rem;
   height: 0.625rem;
   border-radius: 50%;
-  background-color: #f06135;
+  background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
+
   transition: all 0.3s ease;
 
   cursor: pointer;
+}
+.Galeria-btn:hover {
+  border: 0.0625rem solid whitesmoke;
+  box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.4);
+}
+.Galeria-btn:active {
+  transform: scale(1.25);
 }
 .Galeria-btn.isActive {
   width: 1.25rem;
@@ -416,24 +454,18 @@ body {
   line-height: 2rem;
 }
 .Galeria-portfolio-btn {
-  padding: 0.6rem 1.2rem;
+  padding: 1rem 2rem;
   margin: 3rem 0 0 0;
-  background: #f06135;
+  background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
   color: whitesmoke;
+  border: 0.125rem solid whitesmoke;
   border-radius: 5rem;
   font-size: 1rem;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 .Galeria-portfolio-btn:hover {
-  padding: 0.7rem 1.3rem;
-  background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
-  box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.4);
-  border: 0.1875rem solid whitesmoke;
-
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.1rem;
+  box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.5);
 
   cursor: pointer;
 }
@@ -455,7 +487,7 @@ body {
 
 .Footer {
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 0;
   border-top: 0.0625rem solid #3d3d3d;
   font-weight: 500;
   background-color: #0f1108;
@@ -464,9 +496,11 @@ body {
   margin: auto;
 
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  flex-flow: row wrap-reverse;
+  justify-content: space-evenly;
   align-items: center;
+
+  gap: 3rem;
 }
 .Copyright-span {
 }
@@ -482,12 +516,20 @@ body {
 }
 .Mail-span {
   padding-right: 5rem;
-  transition: all 0.5s ease;
-  transform: scale(1);
 }
 .Mail-span:hover {
   text-shadow: 0rem 0rem 1rem #f06135;
-  transform: scale(1.05);
+}
+.Mail-span::after {
+  content: "";
+  width: 0%;
+  height: 0.125rem;
+  background: #f06135;
+  display: block;
+  transition: all 0.3s ease;
+}
+.Mail-span:hover::after {
+  width: 100%;
 }
 .Mail-span:active {
   color: #f06135;
@@ -500,11 +542,12 @@ body {
   }
 }
 @media screen and (max-width: 75rem) {
-  .Navmenu {
-    display: none;
-  }
-  .Header-btn {
-    display: block;
+  .Header-responsive {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
   .Main {
     min-height: 175vh;
@@ -514,9 +557,13 @@ body {
   body {
     font-size: 85%;
   }
+  .Navmenu-a {
+    font-size: 1rem;
+  }
   .Footer-wrapper {
     flex-direction: column;
     align-items: center;
+    gap: 0;
   }
   .Contacto-span {
     padding: 2rem 0;
@@ -555,8 +602,51 @@ body {
   body {
     font-size: 70%;
   }
-  .Rrss {
-    display: none;
+  .Header-wrapper {
+    flex-flow: row wrap;
+  }
+  .Header-responsive {
+    width: 100%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
+    box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.4);
+    border: 0.125rem solid whitesmoke;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .Header-responsive.isActive {
+    height: 35vh;
+    margin: 1rem 0;
+    padding: 3rem 0;
+    opacity: 1;
+  }
+  .Navmenu-a {
+    text-shadow: 0 0 1rem black;
+  }
+  .Rrss-svg {
+    filter: drop-shadow(0 0 1rem black);
+  }
+  .Navmenu {
+    display: flex;
+    flex-flow: column;
+  }
+  .Header-btn {
+    display: block;
+    width: 3rem;
+    height: 3rem;
   }
   .Hero-p {
     font-size: 0.75rem;
@@ -589,5 +679,34 @@ body {
   }
   .Main {
     min-height: 150vh;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .Header-btn {
+    width: 2rem;
+    height: 2rem;
+  }
+  .Hero-btn {
+    padding: 0.5rem 1rem;
+  }
+  .Galeria-portfolio-btn {
+    padding: 0.5rem 1rem;
+  }
+}
+@media screen and (max-width: 300px) {
+  .Hero {
+    min-height: 100vh;
+    top: -100vh;
+  }
+  .Main-container {
+    min-height: 100vh;
+  }
+  .Navmenu {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  .Header-ul.Rrss {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
   }
 }

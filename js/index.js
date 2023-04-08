@@ -24,7 +24,7 @@ arrowNext.addEventListener(`click`, () => {
   if (contador >= 6) {
     contador = 0;
     galeriaCont.style.transform = `translateX(${operacion + 100}%)`;
-}
+  }
 
   //Recorremos el array galeriaImg y quitamos la clase isActive a todas las etiquetas galeriaBtn para después, añadir esa clase según la posición del contador
   galeriaImg.forEach((eachImg, i) => {
@@ -63,4 +63,15 @@ galeriaBtn.forEach((eachBtn, i) => {
     galeriaBtn[i].classList.add(`isActive`);
     galeriaCont.style.transform = `translateX(${operacion}%)`;
   });
+});
+
+//SCRIPT PARA EL BOTON HAMBURGUESA EN EL MODO MÓVIL
+
+//Seleccionamos los objetos implicados
+const headerBtn = document.querySelector(`.Header-btn`);
+const headerResp = document.querySelector(`.Header-responsive`);
+
+//Al hacer click en Header-btn hacemos toggle de la clase isActive para la etiqueta Header-responsive
+headerBtn.addEventListener(`click`, () => {
+  headerResp.classList.toggle(`isActive`);
 });
