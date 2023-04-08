@@ -237,9 +237,9 @@ body {
 }
 .Rrss-svg:hover {
   filter: drop-shadow(0rem 0rem 1rem #f06135);
-  transform: scale(1.1);
 }
 .Rrss-svg:active {
+  transform: scale(1.1);
   fill: #f06135;
 }
 .Header-btn {
