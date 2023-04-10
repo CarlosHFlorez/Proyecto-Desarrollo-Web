@@ -25,7 +25,7 @@ const lightboxSpanProgramas = document.querySelector(`.Lightbox-span-programas`)
 const extractoP = document.querySelectorAll(`.Extracto-p`);
 const lightboxP = document.querySelector(`.Lightbox-p`);
 
-//Recorremos el array de .Proyectios-section, al hacer click en alguna de las etiquetas .Proyectos-section le añadimos a .Lightbox la clase isActive
+//Recorremos el array de .Proyectos-img, al hacer click en alguna de las etiquetas .Proyectos-img le añadimos a .Lightbox la clase isActive, guardamos en source el atributo src de Galeria-img, guardamos en alternative el atributo alt de Galeria-img, guardamos el texto de las etiquetas .Titles-h2, .Software-span y .Extracto-p corespondientes al índice del array para finalmente darles los textos a .Lightbox-h2, .Lightbox-span-programas y .Lightbox-p respectivamente
 proyectosImg.forEach((eachImg, i) => {
   proyectosImg[i].addEventListener(`click`, () => {
     lightbox.classList.add(`isActive`);
@@ -43,5 +43,11 @@ proyectosImg.forEach((eachImg, i) => {
   //Al hacer click en la etiqueta .Lightbox-btn le quitamos la clase isActive a .Lightbox
   lightboxBtn.addEventListener(`click`, () => {
     lightbox.classList.remove(`isActive`);
+  });
+  //Al presionar la tecla Esc le quitamos la clase isActive a .Lightbox
+  document.addEventListener(`keydown`, (esc) => {
+    if (esc.key === `Escape`) {
+      lightbox.classList.remove(`isActive`);
+    }
   });
 });
