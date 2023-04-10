@@ -31,6 +31,8 @@ proyectosImg.forEach((eachImg, i) => {
     lightbox.classList.add(`isActive`);
     let source = galeriaImg[i].getAttribute(`src`);
     lightboxImg.setAttribute(`src`, source);
+    let alternative = galeriaImg[i].getAttribute(`alt`);
+    lightboxImg.setAttribute(`alt`, alternative);
     let titulo = titlesH2[i].textContent;
     lightboxH2.textContent = titulo;
     let programas = softwareSpan[i].textContent;
@@ -41,7 +43,5 @@ proyectosImg.forEach((eachImg, i) => {
   //Al hacer click en la etiqueta .Lightbox-btn le quitamos la clase isActive a .Lightbox
   lightboxBtn.addEventListener(`click`, () => {
     lightbox.classList.remove(`isActive`);
-    lightboxImg.classList.remove(`isActive`);
-    lightboxP.classList.remove(`isActive`);
   });
 });
