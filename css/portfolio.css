@@ -311,7 +311,7 @@ body {
     transform: translate3d(0, 0vh, 0);
   }
 }
-.Portfolio-h2 {
+.Portfolio-h1 {
   margin: 5rem 0;
   text-align: center;
   text-transform: uppercase;
@@ -346,7 +346,7 @@ body {
   opacity: 1;
   transform: scale(1.05);
 }
-.Proyectos-h3 {
+.Proyectos-h2 {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -361,6 +361,123 @@ body {
   top: calc(50% - (3rem / 2));
 
   pointer-events: none;
+}
+.Lightbox {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0f1108;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1;
+  pointer-events: none;
+
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.Lightbox.isActive {
+  opacity: 1;
+  cursor: default;
+  pointer-events: auto;
+}
+.Main-lightbox {
+  margin: auto;
+}
+.Galeria-div {
+  display: none;
+}
+.Galeria-img {
+}
+.Titles-div {
+  display: none;
+}
+.Title-h2 {
+}
+.Software-div {
+  display: none;
+}
+.Software-span {
+}
+.lightbox-div {
+  position: relative;
+}
+.Lightbox-btn {
+  position: absolute;
+  top: 8%;
+  right: 12.5%;
+
+  cursor: pointer;
+  transform: scale(1);
+
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+.Lightbox-btn:hover {
+  transform: scale(1.2);
+}
+.Lightbox-svg {
+  width: 2rem;
+  height: 2rem;
+  pointer-events: none;
+}
+.Lightbox-img {
+  margin: 3vh auto;
+  width: 100%;
+  height: 100%;
+  border: 0.5vw solid whitesmoke;
+  border-radius: 1rem;
+}
+.Lightbox-article {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  gap: 3rem;
+
+  position: absolute;
+  bottom: 15%;
+  left: 15%;
+  right: 15%;
+}
+.Lightbox-title {
+  width: fit-content;
+  background-color: #f0613585;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-shadow: 0 0 0.5rem black;
+}
+.Lightbox-span {
+}
+.Lightbox-h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.Lightbox-software {
+  width: fit-content;
+  background-color: #f0613585;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-shadow: 0 0 0.5rem black;
+}
+.Lightbox-span-programas {
+  display: block;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.Extracto-div {
+  display: none;
+}
+.Extracto-p {
+}
+.Lightbox-p {
+  display: block;
+  background-color: #f0613585;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-shadow: 0 0 0.5rem black;
 }
 
 .Footer {
@@ -419,7 +536,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     padding-bottom: 5rem;
   }
-  .Proyectos-h3 {
+  .Proyectos-h2 {
     font-size: 3rem;
   }
 }
@@ -429,7 +546,7 @@ body {
   .Proyectos {
     grid-template-columns: repeat(1, 1fr);
   }
-  .Proyectos-h3 {
+  .Proyectos-h2 {
     font-size: 4rem;
   }
 }
@@ -446,10 +563,32 @@ body {
   body {
     font-size: 85%;
   }
+  .Lightbox-responsive {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    position: static;
+    gap: 0;
+  }
+  .Lightbox-proyecto,
+  .Lightbox-software,
+  .Lightbox-p {
+    padding: 0;
+    margin-top: 1rem;
+  }
+  .Lightbox-h2,
+  .Lightbox-prog {
+    font-size: 1.5rem;
+  }
+  .Lightbox-columna {
+    gap: 0;
+  }
   .Proyectos {
     grid-template-columns: repeat(2, 1fr);
   }
-  .Proyectos-h3 {
+  .Proyectos-h2 {
     font-size: 1.5rem;
   }
   .Navmenu-a {
@@ -479,7 +618,7 @@ body {
     font-size: 1.4rem;
     line-height: 2.4rem;
   }
-  .Galeria-h2 {
+  .Galeria-h1 {
     font-size: 3rem;
   }
   .Galeria-div {
@@ -494,13 +633,17 @@ body {
   .Proyectos {
     grid-template-columns: repeat(1, 1fr);
   }
-  .Proyectos-h3 {
+  .Proyectos-h2 {
     font-size: 3rem;
   }
 }
 @media screen and (max-width: 48rem) {
   body {
     font-size: 70%;
+  }
+  .Lightbox-h2,
+  .Lightbox-prog {
+    font-size: 1rem;
   }
   .Header-wrapper {
     flex-flow: row wrap;
@@ -563,7 +706,7 @@ body {
     height: 2rem;
     top: calc(50% - (2rem / 2));
   }
-  .Galeria-h2 {
+  .Galeria-h1 {
     font-size: 2rem;
   }
   .Galeria-svg {
@@ -592,7 +735,7 @@ body {
   .Proyectos {
     grid-template-columns: repeat(1, 1fr);
   }
-  .Proyectos-h3 {
+  .Proyectos-h2 {
     font-size: 2rem;
   }
 }
@@ -600,7 +743,7 @@ body {
   .Proyectos {
     grid-template-columns: repeat(1, 1fr);
   }
-  .Proyectos-h3 {
+  .Proyectos-h2 {
     font-size: 1.5rem;
   }
 }
