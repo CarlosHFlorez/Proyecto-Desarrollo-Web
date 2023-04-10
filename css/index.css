@@ -696,7 +696,7 @@ body {
     padding: 0.5rem 1rem;
   }
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 18.75rem) {
   .Hero {
     min-height: 100vh;
     top: -100vh;

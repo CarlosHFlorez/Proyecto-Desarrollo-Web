@@ -436,10 +436,10 @@ body {
   justify-content: center;
   align-items: flex-start;
 
-  gap: 3rem;
+  gap: 1rem;
 
   position: absolute;
-  bottom: 15%;
+  bottom: 10%;
   left: 15%;
   right: 15%;
 }
@@ -539,6 +539,10 @@ body {
   }
 }
 @media screen and (max-width: 100rem) {
+  .Lightbox-btn {
+    top: 7%;
+    right: 13%;
+  }
 }
 @media screen and (max-width: 83rem) {
   .Proyectos {
@@ -556,32 +560,18 @@ body {
     align-items: center;
     gap: 2rem;
   }
+  .Lightbox-btn {
+    top: 6%;
+    right: 13%;
+  }
 }
 @media screen and (max-width: 64rem) {
   body {
     font-size: 85%;
   }
-  .Lightbox-responsive {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-
-    position: static;
-    gap: 0;
-  }
-  .Lightbox-proyecto,
-  .Lightbox-software,
-  .Lightbox-p {
-    padding: 0;
-    margin-top: 1rem;
-  }
   .Lightbox-h2,
-  .Lightbox-prog {
+  .Lightbox-span-programas {
     font-size: 1.5rem;
-  }
-  .Lightbox-columna {
-    gap: 0;
   }
   .Proyectos {
     grid-template-columns: repeat(2, 1fr);
@@ -606,26 +596,6 @@ body {
   .Contacto-div {
     margin-left: 0rem;
   }
-  .Hero-p {
-    font-size: 1.125rem;
-  }
-  .Hero-h1 {
-    font-size: 3rem;
-  }
-  .Hero-about {
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-  }
-  .Galeria-h1 {
-    font-size: 3rem;
-  }
-  .Galeria-div {
-    margin: 0;
-  }
-  .Galeria-p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
 }
 @media screen and (max-width: 50rem) {
   .Proyectos {
@@ -640,7 +610,7 @@ body {
     font-size: 70%;
   }
   .Lightbox-h2,
-  .Lightbox-prog {
+  .Lightbox-span-programas {
     font-size: 1rem;
   }
   .Header-wrapper {
@@ -689,34 +659,9 @@ body {
     width: 3rem;
     height: 3rem;
   }
-  .Hero-p {
-    font-size: 0.75rem;
-  }
-  .Hero-h1 {
-    font-size: 2rem;
-  }
-  .Hero-about {
-    font-size: 1.125rem;
-    line-height: 2rem;
-  }
-  .Galeria-arrow {
-    width: 2rem;
-    height: 2rem;
-    top: calc(50% - (2rem / 2));
-  }
-  .Galeria-h1 {
-    font-size: 2rem;
-  }
-  .Galeria-svg {
-    width: 1rem;
-    height: 1rem;
-  }
-  .Galeria-div {
-    margin: 0;
-  }
-  .Galeria-p {
-    font-size: 0.8rem;
-    line-height: 1.2rem;
+  .Lightbox-btn {
+    top: 6%;
+    right: 15%;
   }
 }
 @media screen and (max-width: 30rem) {
@@ -724,17 +669,15 @@ body {
     width: 2rem;
     height: 2rem;
   }
-  .Hero-btn {
-    padding: 0.5rem 1rem;
-  }
-  .Galeria-portfolio-btn {
-    padding: 0.5rem 1rem;
-  }
   .Proyectos {
     grid-template-columns: repeat(1, 1fr);
   }
   .Proyectos-h2 {
     font-size: 2rem;
+  }
+  .Lightbox-btn {
+    top: 5%;
+    right: 14%;
   }
 }
 @media screen and (max-width: 24.375rem) {
@@ -753,5 +696,9 @@ body {
   .Header-ul.Rrss {
     gap: 0.5rem;
     margin-bottom: 1.5rem;
+  }
+  .Lightbox-btn {
+    top: 5%;
+    right: 14%;
   }
 }
