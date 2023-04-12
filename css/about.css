@@ -299,6 +299,9 @@ body {
 
   border-bottom: 3px solid whitesmoke;
 }
+.Texto-li {
+  filter: drop-shadow(0rem 0rem 1rem #f06135);  
+}
 .Texto-ul.shown > li:nth-child(1) {
   padding-left: 0;
 }
