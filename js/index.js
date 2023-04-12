@@ -21,9 +21,9 @@ arrowNext.addEventListener(`click`, () => {
   let operacion = contador * -(100 / 6);
   galeriaCont.style.transform = `translateX(${operacion}%)`;
   galeriaCont.style.transition = `all 0.5s ease`;
-  if (contador >= 6) {
+  if (contador >= 4) {
     contador = 0;
-    galeriaCont.style.transform = `translateX(${operacion + 100}%)`;
+    galeriaCont.style.transform = `translateX(0%)`;
   }
 
   //Recorremos el array galeriaImg y quitamos la clase isActive a todas las etiquetas galeriaBtn para después, añadir esa clase según la posición del contador
