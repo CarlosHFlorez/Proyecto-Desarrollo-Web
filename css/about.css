@@ -1,0 +1,421 @@
+/* INICIO RESET GLOBAL */
+
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: whitesmoke;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background-color: #0f1108;
+  color: whitesmoke;
+  /* opcional */
+  /* -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; */
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+/* FIN RESET GLOBAL */
+
+.Wrapper {
+  width: 80%;
+}
+.Header {
+  width: 100%;
+  padding: 2rem 0;
+  border-bottom: 0.0625rem solid #3d3d3d;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #0f1108;
+}
+.Header-wrapper {
+  margin: auto;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.Header-grp {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.Header-logo {
+}
+.Header-img {
+  width: 100%;
+  height: 100%;
+}
+.Header-nav {
+}
+.Header-responsive {
+  margin-left: 5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+.Navmenu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+.Navmenu-li {
+  white-space: nowrap;
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+.Navmenu-li:hover {
+  text-shadow: 0rem 0rem 1rem #f06135;
+}
+.Navmenu-li:active {
+  color: #f06135;
+}
+.Navmenu-li::after {
+  content: "";
+  width: 0%;
+  height: 0.125rem;
+  background: #f06135;
+  display: block;
+  transition: all 0.3s ease;
+}
+.Navmenu-li:hover::after {
+  width: 100%;
+}
+.Navmenu-a {
+}
+.Rrss {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+.Rrss-li {
+}
+.Rrss-a {
+}
+.Rrss-svg {
+  padding: 0.3125rem;
+  width: 2rem;
+  height: 2rem;
+  transition: all 0.5s ease;
+  transform: scale(1);
+}
+.Rrss-svg:hover {
+  filter: drop-shadow(0rem 0rem 1rem #f06135);
+}
+.Rrss-svg:active {
+  transform: scale(1.1);
+  fill: #f06135;
+}
+.Header-btn {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 3rem;
+  display: none;
+}
+.Header-svg {
+  margin-left: 3rem;
+  fill: whitesmoke;
+}
+.Main {
+  min-height: 100vh;
+  overflow: hidden;
+}
+.Main-wrapper {
+  margin: auto;
+}
+
+.Footer {
+  width: 100%;
+  padding: 2rem 0;
+  border-top: 0.0625rem solid #3d3d3d;
+  font-weight: 500;
+  background-color: #0f1108;
+}
+.Footer-wrapper {
+  margin: auto;
+
+  display: flex;
+  flex-flow: row wrap-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+
+  gap: 3rem;
+}
+.Copyright-span {
+}
+.Contacto-div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5rem;
+}
+.Contacto-span {
+  padding-right: 1rem;
+}
+.Mail-span {
+  padding-right: 5rem;
+}
+.Mail-span:hover {
+  text-shadow: 0rem 0rem 1rem #f06135;
+}
+.Mail-span::after {
+  content: "";
+  width: 0%;
+  height: 0.125rem;
+  background: #f06135;
+  display: block;
+  transition: all 0.3s ease;
+}
+.Mail-span:hover::after {
+  width: 100%;
+}
+.Mail-span:active {
+  color: #f06135;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 112.5rem) {
+}
+@media screen and (max-width: 100rem) {
+}
+@media screen and (max-width: 83rem) {
+}
+@media screen and (max-width: 75rem) {
+  .Header-responsive {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 64rem) {
+  body {
+    font-size: 85%;
+  }
+  .Navmenu-a {
+    font-size: 1rem;
+  }
+  .Footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .Contacto-span {
+    padding: 2rem 0;
+  }
+  .Mail-span {
+    padding: 2rem 0;
+  }
+  .Contacto-div {
+    margin-left: 0rem;
+  }
+}
+@media screen and (max-width: 50rem) {
+}
+@media screen and (max-width: 48rem) {
+  body {
+    font-size: 70%;
+  }
+  .Header-wrapper {
+    flex-flow: row wrap;
+  }
+  .Header-responsive {
+    width: 100%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
+    box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.4);
+    border: 0.125rem solid whitesmoke;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .Header-responsive.isActive {
+    height: 35vh;
+    margin: 1rem 0;
+    padding: 3rem 0;
+    opacity: 1;
+  }
+  .Navmenu-a {
+    text-shadow: 0 0 1rem black;
+  }
+  .Rrss-svg {
+    filter: drop-shadow(0 0 1rem black);
+  }
+  .Navmenu {
+    display: flex;
+    flex-flow: column;
+  }
+  .Header-btn {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .Header-btn {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media screen and (max-width: 24.375rem) {
+}
+@media screen and (max-width: 18.75rem) {
+  .Navmenu {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  .Header-ul.Rrss {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
