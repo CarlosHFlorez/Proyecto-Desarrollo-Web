@@ -265,14 +265,15 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 5rem;
 }
 .About-columna {
-  width: 100%;
+  width: 50%;
+  /* min-height: 80vh; */
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
 }
 .About-h2 {
@@ -286,11 +287,12 @@ body {
 }
 .About-container {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 .About-svg {
+  margin-left: 1rem;
   width: 2rem;
   height: 2rem;
 }
@@ -298,19 +300,17 @@ body {
   font-size: 1rem;
   text-transform: uppercase;
 }
-.Container-p {
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: flex-start;
-}
 .About-p {
   font-size: 1rem;
   line-height: 1.5rem;
   margin-top: 1rem;
   animation: desdeIzq 0.5s ease backwards;
 }
+.About-img {
+  border-radius: 1rem;
+  /* object-fit: contain; */
+}
+
 .Container-p > :nth-child(1) {
   animation-delay: 0.2s;
 }
@@ -368,11 +368,6 @@ body {
   opacity: 0;
   max-width: 0;
   padding-left: 0;
-}
-.About-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 1rem;
 }
 
 .Footer {
@@ -442,9 +437,6 @@ body {
   }
 }
 @media screen and (max-width: 64rem) {
-  body {
-    font-size: 85%;
-  }
   .Navmenu-a {
     font-size: 1rem;
   }
@@ -464,9 +456,15 @@ body {
   }
   .About {
     display: flex;
-    flex-flow: column;
-    justify-content: center;
+    flex-flow: column nowrap;
+    justify-content: flex;
     align-items: center;
+  }
+  .About-p {
+    font-size: 0.875rem;
+  }
+  .About-columna {
+    width: 100%;
   }
 }
 @media screen and (max-width: 50rem) {
@@ -518,6 +516,12 @@ body {
     width: 3rem;
     height: 3rem;
   }
+  .About-p {
+    font-size: 0.75rem;
+  }
+  .Texto-li {
+    font-size: 1.5rem;
+  }
   .Copyright-span,
   .Contacto-span,
   .Mail-span {
@@ -540,5 +544,8 @@ body {
   .Header-ul.Rrss {
     gap: 0.5rem;
     margin-bottom: 1.5rem;
+  }
+  .Texto-li {
+    font-size: 1rem;
   }
 }
