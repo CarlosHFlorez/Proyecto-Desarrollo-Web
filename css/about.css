@@ -345,12 +345,6 @@ body {
   cursor: pointer;
 }
 .Texto-li {
-  filter: drop-shadow(0rem 0rem 1rem #f06135);
-}
-.Texto-ul.Texto-ul > li:nth-child(1) {
-  padding-left: 0;
-}
-.Texto-ul li {
   font-weight: 700;
   font-size: 2rem;
   color: whitesmoke;
@@ -358,15 +352,19 @@ body {
   transition: all 0.5s ease-in-out;
   max-width: 2rem;
   pointer-events: none;
+  filter: drop-shadow(0rem 0rem 1rem #f06135);
 }
-.Texto-ul.isHidden li.visible {
+.Texto-ul > li:nth-child(1) {
   padding-left: 0;
 }
-.Texto-ul li.visible {
+.Texto-ul.isHidden .visible {
+  padding-left: 0;
+}
+.Texto-ul .visible {
   padding-left: 0.5rem;
   color: #f06135;
 }
-.Texto-ul.isHidden li.invisible {
+.Texto-ul.isHidden .invisible {
   opacity: 0;
   max-width: 0;
   padding-left: 0;
