@@ -555,9 +555,6 @@ body {
   }
 }
 @media screen and (max-width: 64rem) {
-  body {
-    font-size: 85%;
-  }
   .Navmenu-a {
     font-size: 1rem;
   }
@@ -566,11 +563,16 @@ body {
     align-items: center;
     gap: 0;
   }
+  .Copyright-span {
+    font-size: 14px;
+  }
   .Contacto-span {
     padding: 2rem 0;
+    font-size: 14px;
   }
   .Mail-span {
     padding: 2rem 0;
+    font-size: 14px;
   }
   .Contacto-div {
     margin-left: 0rem;
@@ -600,9 +602,6 @@ body {
   }
 }
 @media screen and (max-width: 48rem) {
-  body {
-    font-size: 70%;
-  }
   .Header-wrapper {
     flex-flow: row wrap;
   }
@@ -680,6 +679,11 @@ body {
   }
   .Main {
     min-height: 150vh;
+  }
+  .Copyright-span,
+  .Contacto-span,
+  .Mail-span {
+    font-size: 0.75rem;
   }
 }
 @media screen and (max-width: 30rem) {

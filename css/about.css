@@ -472,9 +472,6 @@ body {
 @media screen and (max-width: 50rem) {
 }
 @media screen and (max-width: 48rem) {
-  body {
-    font-size: 70%;
-  }
   .Header-wrapper {
     flex-flow: row wrap;
   }
@@ -520,6 +517,11 @@ body {
     display: block;
     width: 3rem;
     height: 3rem;
+  }
+  .Copyright-span,
+  .Contacto-span,
+  .Mail-span {
+    font-size: 0.75rem;
   }
 }
 @media screen and (max-width: 30rem) {

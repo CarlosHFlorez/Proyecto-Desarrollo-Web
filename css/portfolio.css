@@ -663,6 +663,11 @@ body {
     top: 6%;
     right: 15%;
   }
+  .Copyright-span,
+  .Contacto-span,
+  .Mail-span {
+    font-size: 0.75rem;
+  }
 }
 @media screen and (max-width: 30rem) {
   .Header-btn {
