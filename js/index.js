@@ -1,5 +1,16 @@
 `use strict`;
 
+//SCRIPT PARA EL BOTON HAMBURGUESA EN EL MODO MÓVIL
+
+//Seleccionamos los objetos implicados
+const headerBtn = document.querySelector(`.Header-btn`);
+const headerResp = document.querySelector(`.Header-responsive`);
+
+//Al hacer click en Header-btn hacemos toggle de la clase isActive para la etiqueta Header-responsive
+headerBtn.addEventListener(`click`, () => {
+  headerResp.classList.toggle(`isActive`);
+});
+
 //SCRIPT PARA LA GALERÍA DE IMÁGENES DE INDEX.HMTL
 
 //Seleccionamos los objetos implicados
@@ -21,7 +32,7 @@ arrowNext.addEventListener(`click`, () => {
   let operacion = contador * -(100 / 6);
   galeriaCont.style.transform = `translateX(${operacion}%)`;
   galeriaCont.style.transition = `all 0.5s ease`;
-  if (contador >= 6) {
+  if (contador >= 4) {
     contador = 0;
     galeriaCont.style.transform = `translateX(0%)`;
   }
@@ -65,13 +76,4 @@ galeriaBtn.forEach((eachBtn, i) => {
   });
 });
 
-//SCRIPT PARA EL BOTON HAMBURGUESA EN EL MODO MÓVIL
 
-//Seleccionamos los objetos implicados
-const headerBtn = document.querySelector(`.Header-btn`);
-const headerResp = document.querySelector(`.Header-responsive`);
-
-//Al hacer click en Header-btn hacemos toggle de la clase isActive para la etiqueta Header-responsive
-headerBtn.addEventListener(`click`, () => {
-  headerResp.classList.toggle(`isActive`);
-});
