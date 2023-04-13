@@ -319,12 +319,9 @@ body {
   animation: up 1.25s ease-out;
 }
 .Hero-a {
-  margin: 0 auto;
-  animation: up 1.5s ease-out;
-}
-.Hero-btn {
   padding: 1rem 2rem;
-  margin-top: 5vh;
+
+  margin: 5vh auto 0;
   background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
   color: whitesmoke;
   border: 0.125rem solid whitesmoke;
@@ -332,12 +329,13 @@ body {
   font-size: 1rem;
   font-weight: 500;
   transition: all 0.3s ease;
+  animation: up 1.5s ease-out;
 }
-.Hero-btn:hover {
+.Hero-a:hover {
   box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.5);
   cursor: pointer;
 }
-.Hero-btn:active {
+.Hero-a:active {
   background: transparent;
 }
 @keyframes up {
@@ -453,10 +451,10 @@ body {
   font-size: 1.25rem;
   line-height: 2rem;
 }
-.Galeria-a{
-  color:#f06135
+.Galeria-a {
+  color: #f06135;
 }
-.Galeria-portfolio-btn {
+.Galeria-portfolio-a {
   padding: 1rem 2rem;
   margin: 3rem 0 0 0;
   background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
@@ -467,12 +465,12 @@ body {
   font-weight: 500;
   transition: all 0.3s ease;
 }
-.Galeria-portfolio-btn:hover {
+.Galeria-portfolio-a:hover {
   box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.5);
 
   cursor: pointer;
 }
-.Galeria-portfolio-btn:active {
+.Galeria-portfolio-a:active {
   background: transparent;
 }
 .next {
@@ -689,10 +687,10 @@ body {
     width: 2rem;
     height: 2rem;
   }
-  .Hero-btn {
+  .Hero-a {
     padding: 0.5rem 1rem;
   }
-  .Galeria-portfolio-btn {
+  .Galeria-portfolio-a {
     padding: 0.5rem 1rem;
   }
 }
