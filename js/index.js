@@ -21,7 +21,7 @@ arrowNext.addEventListener(`click`, () => {
   let operacion = contador * -(100 / 6);
   galeriaCont.style.transform = `translateX(${operacion}%)`;
   galeriaCont.style.transition = `all 0.5s ease`;
-  if (contador >= 6) {
+  if (contador >= 4) {
     contador = 0;
     galeriaCont.style.transform = `translateX(0%)`;
   }
