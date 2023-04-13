@@ -341,14 +341,14 @@ body {
   align-items: center;
 
   border-bottom: 0.1875rem solid whitesmoke;
+
+  cursor: pointer;
 }
 .Texto-li {
   filter: drop-shadow(0rem 0rem 1rem #f06135);
 }
 .Texto-ul.Texto-ul > li:nth-child(1) {
   padding-left: 0;
-}
-.Texto-ul.isActive {
 }
 .Texto-ul li {
   font-weight: 700;
@@ -357,15 +357,16 @@ body {
   opacity: 1;
   transition: all 0.5s ease-in-out;
   max-width: 2rem;
+  pointer-events: none;
 }
-.Texto-ul.isActive li.visible {
+.Texto-ul.isHidden li.visible {
   padding-left: 0;
 }
 .Texto-ul li.visible {
   padding-left: 0.5rem;
   color: #f06135;
 }
-.Texto-ul.isActive li.invisible {
+.Texto-ul.isHidden li.invisible {
   opacity: 0;
   max-width: 0;
   padding-left: 0;
