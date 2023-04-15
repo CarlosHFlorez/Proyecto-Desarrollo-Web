@@ -22,6 +22,7 @@ const galeriaBtn = document.querySelectorAll(`.Galeria-btn`);
 
 //Establecemos el contador a 0
 let contador = 0;
+let contadorPuntos = 0;
 
 //Le damos la clase isActive a galeriaBtn en función del número actual del contador
 galeriaBtn[contador].classList.add(`isActive`);
@@ -36,12 +37,17 @@ arrowNext.addEventListener(`click`, () => {
     contador = 0;
     galeriaCont.style.transform = `translateX(0%)`;
   }
+  if (contador >= 3) {
+    contadorPuntos = 1;
+  } else {
+    contadorPuntos = 0;
+  }
 
   //Recorremos el array galeriaImg y quitamos la clase isActive a todas las etiquetas galeriaBtn para después, añadir esa clase según la posición del contador
-  galeriaImg.forEach((eachImg, i) => {
+  galeriaBtn.forEach((eachBtn, i) => {
     galeriaBtn[i].classList.remove(`isActive`);
   });
-  galeriaBtn[contador].classList.add(`isActive`);
+  galeriaBtn[contadorPuntos].classList.add(`isActive`);
 });
 
 //Al hacer click en arrowPrev el contador disminuye en 1, guardamos la operación en la variable, movemos a galaeriaCont en el eje X según el resultado de operacion, aplicamos una transición y si contador es igual o menor que -1 entonces se restablecen su valor y la posición enel eje X de galeriaCont
@@ -52,28 +58,37 @@ arrowPrev.addEventListener(`click`, () => {
   galeriaCont.style.transition = `all 0.5s ease`;
 
   if (contador <= -1) {
-    contador = 5;
-    galeriaCont.style.transform = `translateX(${operacion - 100}%)`;
+    contador = 3;
+    galeriaCont.style.transform = `translateX(${operacion - 67}%)`;
+  }
+  if (contador <= 0) {
+    contadorPuntos = 0;
+  } else {
+    contadorPuntos = 1;
   }
   //Recorremos el array galeriaImg y quitamos la clase isActive a todas las etiquetas galeriaBtn para después, añadir esa clase según la posición del contador
-  galeriaImg.forEach((eachImg, i) => {
+  galeriaBtn.forEach((eachBtn, i) => {
     galeriaBtn[i].classList.remove(`isActive`);
   });
-  galeriaBtn[contador].classList.add(`isActive`);
+  galeriaBtn[contadorPuntos].classList.add(`isActive`);
 });
 
 //Recorremos el array galeriaBtn y si hacemos click la posición del índice se iguala al contador, hacemos la misma operación que hicimos anterioremente y la guardamos en la variable,recorremos nuevamente el array para qutiarle la clase isActive a todas las etiquetas galeriaBtn y se la damos a la del índice actual para finalmente mover en el eje X a galeriaCont el porcentaje del valor de la variavble operación.
 
 galeriaBtn.forEach((eachBtn, i) => {
   galeriaBtn[i].addEventListener(`click`, () => {
-    contador = i;
-    let operacion = contador * -(100 / 6);
+    contadorPuntos = i;
+    let operacion = contadorPuntos * -(100 / 2);
     galeriaBtn.forEach((eachBtn, i) => {
       galeriaBtn[i].classList.remove(`isActive`);
+      if ((contadorPuntos = 0)) {
+        contador = 0;
+      }
+      if ((contadorPuntos = 1)) {
+        contador = 3;
+      }
     });
     galeriaBtn[i].classList.add(`isActive`);
     galeriaCont.style.transform = `translateX(${operacion}%)`;
   });
 });
-
-
