@@ -308,7 +308,6 @@ body {
 }
 .About-img {
   border-radius: 1rem;
-  /* object-fit: contain; */
 }
 
 .Container-p > :nth-child(1) {
