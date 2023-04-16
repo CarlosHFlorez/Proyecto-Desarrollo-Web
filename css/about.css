@@ -385,9 +385,14 @@ body {
   justify-content: flex-start;
   align-items: center;
 
-  border-bottom: 0.1875rem solid var(--Texts);
-
   cursor: pointer;
+  border-bottom: 0.1875rem solid var(--Texts);
+}
+.Texto-ul:hover {
+  filter: drop-shadow(0rem 0rem 1rem var(--Main-color));
+}
+.Texto-ul:active {
+  transform: scale(1.05);
 }
 .Texto-li {
   font-weight: 700;
@@ -397,7 +402,6 @@ body {
   transition: all 0.5s ease-in-out;
   max-width: 2rem;
   pointer-events: none;
-  filter: drop-shadow(0rem 0rem 1rem var(--Main-color));
 }
 .Texto-ul > li:nth-child(1) {
   padding-left: 0;
