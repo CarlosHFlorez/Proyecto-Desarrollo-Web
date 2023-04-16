@@ -269,8 +269,8 @@ body {
   gap: 5rem;
 }
 .About-columna {
-  width: 50%;
-  /* min-height: 80vh; */
+  width: 100%;
+
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -305,14 +305,30 @@ body {
   line-height: 1.5rem;
   margin-top: 1rem;
   animation: desdeIzq 0.5s ease backwards;
+  transition: all 0.5s ease;
 }
 
 .About-img {
   width: 50%;
   height: 50%;
+  padding: 0.25rem;
   border-radius: 1rem;
+  background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
+  box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.4);
+  animation: aparecer 1s ease;
 }
-
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateX(150%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.Container-p {
+}
 .Container-p > :nth-child(1) {
   animation-delay: 0.2s;
 }
