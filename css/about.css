@@ -306,7 +306,10 @@ body {
   margin-top: 1rem;
   animation: desdeIzq 0.5s ease backwards;
 }
+
 .About-img {
+  width: 50%;
+  height: 50%;
   border-radius: 1rem;
 }
 
