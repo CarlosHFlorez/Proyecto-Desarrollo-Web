@@ -2,16 +2,27 @@
 
 @charset "UTF-8";
 
+:root {
+  --Main-color: #f06135;
+  --Background: #0f1108;
+  --Borders: #3d3d3d;
+  --Texts: whitesmoke;
+  --Gradient: #fff800;
+  --Secondary-gradient: rgba(236, 180, 28, 0.5);
+  --Lightbox: rgba(240, 97, 53, 0.5);
+  --Shadows: black;
+}
+
 ::-webkit-scrollbar {
   width: 0.625rem;
 }
 
 ::-webkit-scrollbar-track {
-  background: #3d3d3d;
+  background: var(--Borders);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #f06135;
+  background: var(--Main-color);
   border-radius: 1rem;
 }
 
@@ -92,12 +103,12 @@ q:after {
 
 /* Configuramos el texto que seleccionamos */
 ::-moz-selection {
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: var(--Main-color);
+  color: var(--Texts);
 }
 ::selection {
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: var(--Main-color);
+  color: var(--Texts);
 }
 
 /* Nivelamos problemas de tipografías y colocación de formularios */
@@ -133,7 +144,7 @@ td {
 svg {
   width: 100%;
   display: block;
-  fill: whitesmoke;
+  fill: var(--Texts);
 }
 
 /* Configuramos la tipografía para toda la web */
@@ -143,7 +154,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   background-color: #0f1108;
-  color: whitesmoke;
+  color: var(--Texts);
   /* opcional */
   /* -webkit-hyphens: auto;
   -ms-hyphens: auto;
@@ -163,10 +174,10 @@ body {
 .Header {
   width: 100%;
   padding: 2rem 0;
-  border-bottom: 0.0625rem solid #3d3d3d;
+  border-bottom: 0.0625rem solid var(--Borders);
   font-weight: 500;
   text-transform: uppercase;
-  background-color: #0f1108;
+  background-color: var(--Background);
 }
 .Header-wrapper {
   margin: auto;
@@ -212,16 +223,16 @@ body {
   transition: all 0.5s ease;
 }
 .Navmenu-li:hover {
-  text-shadow: 0rem 0rem 1rem #f06135;
+  text-shadow: 0rem 0rem 1rem var(--Main-color);
 }
 .Navmenu-li:active {
-  color: #f06135;
+  color: var(--Main-color);
 }
 .Navmenu-li::after {
   content: "";
   width: 0%;
   height: 0.125rem;
-  background: #f06135;
+  background: var(--Main-color);
   display: block;
   transition: all 0.3s ease;
 }
@@ -249,11 +260,11 @@ body {
   transform: scale(1);
 }
 .Rrss-svg:hover {
-  filter: drop-shadow(0rem 0rem 1rem #f06135);
+  filter: drop-shadow(0rem 0rem 1rem var(--Main-color));
 }
 .Rrss-svg:active {
   transform: scale(1.1);
-  fill: #f06135;
+  fill: var(--Main-color);
 }
 .Header-btn {
   width: 3rem;
@@ -263,7 +274,7 @@ body {
 }
 .Header-svg {
   margin-left: 3rem;
-  fill: whitesmoke;
+  fill: var(--Texts);
 }
 .Main {
   min-height: 135vh;
@@ -331,7 +342,7 @@ body {
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.125rem;
-  color: #f06135;
+  color: var(--Main-color);
 }
 .Proyectos-img {
   width: 100%;
@@ -339,7 +350,7 @@ body {
   border-radius: 1rem;
 
   padding: 0.1875rem;
-  background: #0f1108;
+  background: var(--Background);
   border-radius: 1rem;
 
   position: relative;
@@ -350,8 +361,8 @@ body {
 }
 .Proyectos-img:hover {
   padding: 0.1875rem;
-  background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
-  box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.4);
+  background: linear-gradient(25deg, var(--Gradient) 0%, var(--Main-color) 40%, var(--Main-color) 60%, var(--Gradient) 100%);
+  box-shadow: 0rem 0rem 2rem 0.125rem var(--Secondary-gradient);
   border-radius: 1rem;
 
   opacity: 1;
@@ -363,7 +374,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1rem;
-  text-shadow: 0 0 2rem black;
+  text-shadow: 0 0 2rem var(--Shadows);
   font-size: 2rem;
   line-height: 3rem;
   font-weight: 700;
@@ -376,7 +387,7 @@ body {
 .Lightbox {
   width: 100%;
   min-height: 100vh;
-  background-color: #0f1108;
+  background-color: var(--Background);
 
   position: fixed;
   top: 0;
@@ -437,7 +448,7 @@ body {
   margin: 3vh auto;
   width: 100%;
   height: 94vh;
-  border: 1vw solid whitesmoke;
+  border: 1vw solid var(--Texts);
   border-radius: 1rem;
   object-fit: cover;
 }
@@ -455,10 +466,10 @@ body {
   right: 15%;
 }
 .Lightbox-title {
-  background-color: #f0613585;
+  background-color: var(--Lightbox);
   padding: 1rem;
   border-radius: 1rem;
-  text-shadow: 0 0 0.5rem black;
+  text-shadow: 0 0 0.5rem var(--Shadows);
 }
 .Lightbox-span {
 }
@@ -467,10 +478,10 @@ body {
   text-transform: uppercase;
 }
 .Lightbox-software {
-  background-color: #f0613585;
+  background-color: var(--Lightbox);
   padding: 1rem;
   border-radius: 1rem;
-  text-shadow: 0 0 0.5rem black;
+  text-shadow: 0 0 0.5rem var(--Shadows);
 }
 .Lightbox-span-programas {
   display: block;
@@ -483,18 +494,18 @@ body {
 .Extracto-p {
 }
 .Lightbox-p {
-  background-color: #f0613585;
+  background-color: var(--Lightbox);
   padding: 1rem;
   border-radius: 1rem;
-  text-shadow: 0 0 0.5rem black;
+  text-shadow: 0 0 0.5rem var(--Shadows);
 }
 
 .Footer {
   width: 100%;
   padding: 2rem 0;
-  border-top: 0.0625rem solid #3d3d3d;
+  border-top: 0.0625rem solid var(--Borders);
   font-weight: 500;
-  background-color: #0f1108;
+  background-color: var(--Background);
 }
 .Footer-wrapper {
   margin: auto;
@@ -522,13 +533,13 @@ body {
   padding-right: 5rem;
 }
 .Mail-span:hover {
-  text-shadow: 0rem 0rem 1rem #f06135;
+  text-shadow: 0rem 0rem 1rem var(--Main-color);
 }
 .Mail-span::after {
   content: "";
   width: 0%;
   height: 0.125rem;
-  background: #f06135;
+  background: var(--Main-color);
   display: block;
   transition: all 0.3s ease;
 }
@@ -536,7 +547,7 @@ body {
   width: 100%;
 }
 .Mail-span:active {
-  color: #f06135;
+  color: var(--Main-color);
 }
 
 /* MEDIA QUERIES */
@@ -635,9 +646,9 @@ body {
 
     overflow: hidden;
 
-    background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
-    box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.4);
-    border: 0.125rem solid whitesmoke;
+    background: linear-gradient(25deg, var(--Gradient) 0%, var(--Main-color) 40%, var(--Main-color) 60%, var(--Gradient) 100%);
+    box-shadow: 0rem 0rem 2rem 0.125rem var(--Lightbox);
+    border: 0.125rem solid var(--Texts);
     border-radius: 1rem;
 
     display: flex;
@@ -656,10 +667,10 @@ body {
     opacity: 1;
   }
   .Navmenu-a {
-    text-shadow: 0 0 1rem black;
+    text-shadow: 0 0 1rem var(--Shadows);
   }
   .Rrss-svg {
-    filter: drop-shadow(0 0 1rem black);
+    filter: drop-shadow(0 0 1rem var(--Shadows));
   }
   .Navmenu {
     display: flex;

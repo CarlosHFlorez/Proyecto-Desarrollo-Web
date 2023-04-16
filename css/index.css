@@ -2,16 +2,25 @@
 
 @charset "UTF-8";
 
+:root {
+  --Main-color: #f06135;
+  --Background: #0f1108;
+  --Borders: #3d3d3d;
+  --Texts: whitesmoke;
+  --Gradient: #fff800;
+  --Secondary-gradient: rgba(236, 180, 28, 0.5);
+  --Shadows: black;
+}
 ::-webkit-scrollbar {
   width: 0.625rem;
 }
 
 ::-webkit-scrollbar-track {
-  background: #3d3d3d;
+  background: var(--Borders);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #f06135;
+  background: var(--Main-color);
   border-radius: 1rem;
 }
 
@@ -92,12 +101,12 @@ q:after {
 
 /* Configuramos el texto que seleccionamos */
 ::-moz-selection {
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: var(--Main-color);
+  color: var(--Texts);
 }
 ::selection {
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: var(--Main-color);
+  color: var(--Texts);
 }
 
 /* Nivelamos problemas de tipografías y colocación de formularios */
@@ -133,7 +142,7 @@ td {
 svg {
   width: 100%;
   display: block;
-  fill: whitesmoke;
+  fill: var(--Texts);
 }
 
 /* Configuramos la tipografía para toda la web */
@@ -143,7 +152,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   background-color: #0f1108;
-  color: whitesmoke;
+  color: var(--Texts);
   /* opcional */
   /* -webkit-hyphens: auto;
   -ms-hyphens: auto;
@@ -163,10 +172,10 @@ body {
 .Header {
   width: 100%;
   padding: 2rem 0;
-  border-bottom: 0.0625rem solid #3d3d3d;
+  border-bottom: 0.0625rem solid var(--Borders);
   font-weight: 500;
   text-transform: uppercase;
-  background-color: #0f1108;
+  background-color: var(--Background);
 }
 .Header-wrapper {
   margin: auto;
@@ -212,16 +221,16 @@ body {
   transition: all 0.5s ease;
 }
 .Navmenu-li:hover {
-  text-shadow: 0rem 0rem 1rem #f06135;
+  text-shadow: 0rem 0rem 1rem var(--Main-color);
 }
 .Navmenu-li:active {
-  color: #f06135;
+  color: var(--Main-color);
 }
 .Navmenu-li::after {
   content: "";
   width: 0%;
   height: 0.125rem;
-  background: #f06135;
+  background: var(--Main-color);
   display: block;
   transition: all 0.3s ease;
 }
@@ -249,11 +258,11 @@ body {
   transform: scale(1);
 }
 .Rrss-svg:hover {
-  filter: drop-shadow(0rem 0rem 1rem #f06135);
+  filter: drop-shadow(0rem 0rem 1rem var(--Main-color));
 }
 .Rrss-svg:active {
   transform: scale(1.1);
-  fill: #f06135;
+  fill: var(--Main-color);
 }
 .Header-btn {
   width: 3rem;
@@ -263,7 +272,7 @@ body {
 }
 .Header-svg {
   margin-left: 3rem;
-  fill: whitesmoke;
+  fill: var(--Texts);
 }
 .Main {
   width: 100%;
@@ -316,7 +325,7 @@ body {
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.125rem;
-  color: #f06135;
+  color: var(--Main-color);
   animation: up 0.75s ease-out;
 }
 .Hero-h1 {
@@ -335,9 +344,9 @@ body {
   padding: 1rem 2rem;
 
   margin: 5vh auto 0;
-  background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
-  color: whitesmoke;
-  border: 0.125rem solid whitesmoke;
+  background: linear-gradient(25deg, var(--Gradient) 0%, var(--Main-color) 40%, var(--Main-color) 60%, var(--Gradient) 100%);
+  color: var(--Texts);
+  border: 0.125rem solid var(--Texts);
   border-radius: 5rem;
   font-size: 1rem;
   font-weight: 500;
@@ -345,7 +354,7 @@ body {
   animation: up 1.5s ease-out;
 }
 .Hero-a:hover {
-  box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.5);
+  box-shadow: 0rem 0rem 2rem 0.125rem var(--Secondary-gradient);
   cursor: pointer;
 }
 .Hero-a:active {
@@ -378,7 +387,7 @@ body {
   position: relative;
 }
 .Galeria-container-img {
-  width:200%;
+  width: 200%;
 
   display: flex;
   flex-flow: row nowrap;
@@ -415,8 +424,8 @@ body {
 .Galeria-arrow {
   width: 3rem;
   height: 3rem;
-  border: 0.125rem solid whitesmoke;
-  background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
+  border: 0.125rem solid var(--Texts);
+  background: linear-gradient(25deg, var(--Gradient) 0%, var(--Main-color) 40%, var(--Main-color) 60%, var(--Gradient) 100%);
   border-radius: 50%;
 
   position: absolute;
@@ -427,7 +436,7 @@ body {
   z-index: 1;
 }
 .Galeria-arrow:hover {
-  box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.4);
+  box-shadow: 0rem 0rem 2rem 0.125rem var(--Secondary-gradient);
 }
 .Galeria-arrow:active {
   transform: scale(1.1);
@@ -436,15 +445,15 @@ body {
   width: 0.625rem;
   height: 0.625rem;
   border-radius: 50%;
-  background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
+  background: linear-gradient(25deg, var(--Gradient) 0%, var(--Main-color) 40%, var(--Main-color) 60%, var(--Gradient) 100%);
 
   transition: all 0.3s ease;
 
   cursor: pointer;
 }
 .Galeria-btn:hover {
-  border: 0.0625rem solid whitesmoke;
-  box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.4);
+  border: 0.0625rem solid var(--Texts);
+  box-shadow: 0rem 0rem 2rem 0.125rem var(--Secondary-gradient);
 }
 .Galeria-btn:active {
   transform: scale(1.25);
@@ -452,7 +461,7 @@ body {
 .Galeria-btn.isActive {
   width: 1.25rem;
   height: 1.25rem;
-  border: 0.125rem solid whitesmoke;
+  border: 0.125rem solid var(--Texts);
 }
 .Galeria-div {
   width: 100%;
@@ -469,21 +478,21 @@ body {
   line-height: 2rem;
 }
 .Galeria-a {
-  color: #f06135;
+  color: var(--Main-color);
 }
 .Galeria-portfolio-a {
   padding: 1rem 2rem;
   margin: 3rem 0 0 0;
-  background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
-  color: whitesmoke;
-  border: 0.125rem solid whitesmoke;
+  background: linear-gradient(25deg, var(--Gradient) 0%, var(--Main-color) 40%, var(--Main-color) 60%, var(--Gradient) 100%);
+  color: var(--Texts);
+  border: 0.125rem solid var(--Texts);
   border-radius: 5rem;
   font-size: 1rem;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 .Galeria-portfolio-a:hover {
-  box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.5);
+  box-shadow: 0rem 0rem 2rem 0.125rem var(--Secondary-gradient);
 
   cursor: pointer;
 }
@@ -497,7 +506,7 @@ body {
   width: 2rem;
   height: 2rem;
   margin: auto;
-  fill: whitesmoke;
+  fill: var(--Texts);
 }
 .prev {
   left: 2%;
@@ -506,9 +515,9 @@ body {
 .Footer {
   width: 100%;
   padding: 2rem 0;
-  border-top: 0.0625rem solid #3d3d3d;
+  border-top: 0.0625rem solid var(--Borders);
   font-weight: 500;
-  background-color: #0f1108;
+  background-color: var(--Background);
 }
 .Footer-wrapper {
   margin: auto;
@@ -536,13 +545,13 @@ body {
   padding-right: 5rem;
 }
 .Mail-span:hover {
-  text-shadow: 0rem 0rem 1rem #f06135;
+  text-shadow: 0rem 0rem 1rem var(--Main-color);
 }
 .Mail-span::after {
   content: "";
   width: 0%;
   height: 0.125rem;
-  background: #f06135;
+  background: var(--Main-color);
   display: block;
   transition: all 0.3s ease;
 }
@@ -550,7 +559,7 @@ body {
   width: 100%;
 }
 .Mail-span:active {
-  color: #f06135;
+  color: var(--Main-color);
 }
 
 /* MEDIA QUERIES */
@@ -581,15 +590,15 @@ body {
     gap: 0;
   }
   .Copyright-span {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .Contacto-span {
     padding: 2rem 0;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .Mail-span {
     padding: 2rem 0;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .Contacto-div {
     margin-left: 0rem;
@@ -630,9 +639,9 @@ body {
 
     overflow: hidden;
 
-    background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
-    box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.4);
-    border: 0.125rem solid whitesmoke;
+    background: linear-gradient(25deg, var(--Gradient) 0%, var(--Main-color) 40%, var(--Main-color) 60%, var(--Gradient) 100%);
+    box-shadow: 0rem 0rem 2rem 0.125rem var(--Secondary-gradient);
+    border: 0.125rem solid var(--Texts);
     border-radius: 1rem;
 
     display: flex;
@@ -651,10 +660,10 @@ body {
     opacity: 1;
   }
   .Navmenu-a {
-    text-shadow: 0 0 1rem black;
+    text-shadow: 0 0 1rem var(--Shadows);
   }
   .Rrss-svg {
-    filter: drop-shadow(0 0 1rem black);
+    filter: drop-shadow(0 0 1rem var(--Shadows));
   }
   .Navmenu {
     display: flex;
