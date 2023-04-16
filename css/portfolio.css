@@ -3,7 +3,7 @@
 @charset "UTF-8";
 
 ::-webkit-scrollbar {
-  width: 0.625rem
+  width: 0.625rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -332,8 +332,6 @@ body {
   font-weight: 500;
   letter-spacing: 0.125rem;
   color: #f06135;
-}
-.Proyectos-a {
 }
 .Proyectos-img {
   width: 100%;
