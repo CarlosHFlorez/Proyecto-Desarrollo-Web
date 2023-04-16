@@ -2,6 +2,19 @@
 
 @charset "UTF-8";
 
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #3d3d3d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f06135;
+  border-radius: 16px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -149,8 +162,8 @@ body {
 }
 .Header {
   width: 100%;
-  padding: 2rem 0;
-  border-bottom: 0.0625rem solid #3d3d3d;
+  padding: 32px 0;
+  border-bottom: 1px solid #3d3d3d;
   font-weight: 500;
   text-transform: uppercase;
   background-color: #0f1108;
@@ -179,19 +192,19 @@ body {
 .Header-nav {
 }
 .Header-responsive {
-  margin-left: 5rem;
+  margin-left: 80px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  gap: 5rem;
+  gap: 80px;
 }
 .Navmenu {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
-  gap: 2rem;
+  gap: 32px;
 }
 .Navmenu-li {
   white-space: nowrap;
@@ -199,7 +212,7 @@ body {
   transition: all 0.5s ease;
 }
 .Navmenu-li:hover {
-  text-shadow: 0rem 0rem 1rem #f06135;
+  text-shadow: 0px 0px 16px #f06135;
 }
 .Navmenu-li:active {
   color: #f06135;
@@ -207,7 +220,7 @@ body {
 .Navmenu-li::after {
   content: "";
   width: 0%;
-  height: 0.125rem;
+  height: 2px;
   background: #f06135;
   display: block;
   transition: all 0.3s ease;
@@ -222,34 +235,34 @@ body {
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
-  gap: 1rem;
+  gap: 16px;
 }
 .Rrss-li {
 }
 .Rrss-a {
 }
 .Rrss-svg {
-  padding: 0.3125rem;
-  width: 2rem;
-  height: 2rem;
+  padding: 5px;
+  width: 32px;
+  height: 32px;
   transition: all 0.5s ease;
   transform: scale(1);
 }
 .Rrss-svg:hover {
-  filter: drop-shadow(0rem 0rem 1rem #f06135);
+  filter: drop-shadow(0px 0px 16px #f06135);
 }
 .Rrss-svg:active {
   transform: scale(1.1);
   fill: #f06135;
 }
 .Header-btn {
-  width: 3rem;
-  height: 3rem;
-  margin-right: 3rem;
+  width: 48px;
+  height: 48px;
+  margin-right: 48px;
   display: none;
 }
 .Header-svg {
-  margin-left: 3rem;
+  margin-left: 48px;
   fill: whitesmoke;
 }
 .Main {
@@ -266,7 +279,7 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  gap: 5rem;
+  gap: 80px;
 }
 .About-columna {
   width: 100%;
@@ -277,12 +290,12 @@ body {
   align-items: flex-start;
 }
 .About-h2 {
-  margin-bottom: 5rem;
+  margin-bottom: 80px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 19.2px;
   font-weight: 500;
-  letter-spacing: 0.125rem;
+  letter-spacing: 2px;
   color: #f06135;
 }
 .About-container {
@@ -292,18 +305,18 @@ body {
   align-items: flex-start;
 }
 .About-svg {
-  margin-left: 1rem;
-  width: 2rem;
-  height: 2rem;
+  margin-left: 16px;
+  width: 32px;
+  height: 32px;
 }
 .About-span {
-  font-size: 1rem;
+  font-size: 16px;
   text-transform: uppercase;
 }
 .About-p {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-top: 1rem;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 16px;
   animation: desdeIzq 0.5s ease backwards;
   transition: all 0.5s ease;
 }
@@ -311,10 +324,10 @@ body {
 .About-img {
   width: 50%;
   height: 50%;
-  padding: 0.25rem;
-  border-radius: 1rem;
+  padding: 4px;
+  border-radius: 16px;
   background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
-  box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.4);
+  box-shadow: 0px 0px 32px 2px rgba(236, 180, 28, 0.4);
   animation: aparecer 1s ease;
 }
 @keyframes aparecer {
@@ -358,19 +371,19 @@ body {
   justify-content: flex-start;
   align-items: center;
 
-  border-bottom: 0.1875rem solid whitesmoke;
+  border-bottom: 3px solid whitesmoke;
 
   cursor: pointer;
 }
 .Texto-li {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 32px;
   color: whitesmoke;
   opacity: 1;
   transition: all 0.5s ease-in-out;
-  max-width: 2rem;
+  max-width: 32px;
   pointer-events: none;
-  filter: drop-shadow(0rem 0rem 1rem #f06135);
+  filter: drop-shadow(0px 0px 16px #f06135);
 }
 .Texto-ul > li:nth-child(1) {
   padding-left: 0;
@@ -379,7 +392,7 @@ body {
   padding-left: 0;
 }
 .Texto-ul .visible {
-  padding-left: 0.5rem;
+  padding-left: 8px;
   color: #f06135;
 }
 .Texto-ul.isHidden .invisible {
@@ -390,8 +403,8 @@ body {
 
 .Footer {
   width: 100%;
-  padding: 2rem 0;
-  border-top: 0.0625rem solid #3d3d3d;
+  padding: 32px 0;
+  border-top: 1px solid #3d3d3d;
   font-weight: 500;
   background-color: #0f1108;
 }
@@ -403,7 +416,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
 
-  gap: 3rem;
+  gap: 48px;
 }
 .Copyright-span {
 }
@@ -412,21 +425,21 @@ body {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  margin-left: 5rem;
+  margin-left: 80px;
 }
 .Contacto-span {
-  padding-right: 1rem;
+  padding-right: 16px;
 }
 .Mail-span {
-  padding-right: 5rem;
+  padding-right: 80px;
 }
 .Mail-span:hover {
-  text-shadow: 0rem 0rem 1rem #f06135;
+  text-shadow: 0px 0px 16px #f06135;
 }
 .Mail-span::after {
   content: "";
   width: 0%;
-  height: 0.125rem;
+  height: 2px;
   background: #f06135;
   display: block;
   transition: all 0.3s ease;
@@ -439,24 +452,24 @@ body {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 112.5rem) {
+@media screen and (max-width: 1800px) {
 }
-@media screen and (max-width: 100rem) {
+@media screen and (max-width: 1600px) {
 }
-@media screen and (max-width: 83rem) {
+@media screen and (max-width: 1328px) {
 }
-@media screen and (max-width: 75rem) {
+@media screen and (max-width: 1200px) {
   .Header-responsive {
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 32px;
   }
 }
-@media screen and (max-width: 64rem) {
+@media screen and (max-width: 1024px) {
   .Navmenu-a {
-    font-size: 1rem;
+    font-size: 16px;
   }
   .Footer-wrapper {
     flex-direction: column;
@@ -464,13 +477,13 @@ body {
     gap: 0;
   }
   .Contacto-span {
-    padding: 2rem 0;
+    padding: 32px 0;
   }
   .Mail-span {
-    padding: 2rem 0;
+    padding: 32px 0;
   }
   .Contacto-div {
-    margin-left: 0rem;
+    margin-left: 0px;
   }
   .About {
     display: flex;
@@ -479,15 +492,15 @@ body {
     align-items: center;
   }
   .About-p {
-    font-size: 0.875rem;
+    font-size: 14px;
   }
   .About-columna {
     width: 100%;
   }
 }
-@media screen and (max-width: 50rem) {
+@media screen and (max-width: 800px) {
 }
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 768px) {
   .Header-wrapper {
     flex-flow: row wrap;
   }
@@ -500,30 +513,30 @@ body {
     overflow: hidden;
 
     background: linear-gradient(25deg, #fff800 0%, #f06135 40%, #f06135 60%, #fff800 100%);
-    box-shadow: 0rem 0rem 2rem 0.125rem rgba(236, 180, 28, 0.4);
-    border: 0.125rem solid whitesmoke;
-    border-radius: 1rem;
+    box-shadow: 0px 0px 32px 2px rgba(236, 180, 28, 0.4);
+    border: 2px solid whitesmoke;
+    border-radius: 16px;
 
     display: flex;
     flex-direction: row wrap;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 48px;
 
     opacity: 0;
     transition: all 0.5s ease;
   }
   .Header-responsive.isActive {
     height: 35vh;
-    margin: 1rem 0;
-    padding: 3rem 0;
+    margin: 16px 0;
+    padding: 48px 0;
     opacity: 1;
   }
   .Navmenu-a {
-    text-shadow: 0 0 1rem black;
+    text-shadow: 0 0 16px black;
   }
   .Rrss-svg {
-    filter: drop-shadow(0 0 1rem black);
+    filter: drop-shadow(0 0 16px black);
   }
   .Navmenu {
     display: flex;
@@ -531,39 +544,39 @@ body {
   }
   .Header-btn {
     display: block;
-    width: 3rem;
-    height: 3rem;
+    width: 48px;
+    height: 48px;
   }
   .About-p {
-    font-size: 0.75rem;
+    font-size: 12px;
   }
   .Texto-li {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
   .Copyright-span,
   .Contacto-span,
   .Mail-span {
-    font-size: 0.75rem;
+    font-size: 12px;
   }
 }
-@media screen and (max-width: 30rem) {
+@media screen and (max-width: 480px) {
   .Header-btn {
-    width: 2rem;
-    height: 2rem;
+    width: 32px;
+    height: 32px;
   }
 }
-@media screen and (max-width: 24.375rem) {
+@media screen and (max-width: 390px) {
 }
-@media screen and (max-width: 18.75rem) {
+@media screen and (max-width: 300px) {
   .Navmenu {
-    margin-top: 2rem;
-    gap: 1rem;
+    margin-top: 32px;
+    gap: 16px;
   }
   .Header-ul.Rrss {
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    gap: 8px;
+    margin-bottom: 24px;
   }
   .Texto-li {
-    font-size: 1rem;
+    font-size: 16px;
   }
 }

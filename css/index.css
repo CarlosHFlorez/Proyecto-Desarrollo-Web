@@ -2,6 +2,19 @@
 
 @charset "UTF-8";
 
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #3d3d3d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f06135;
+  border-radius: 1rem;
+}
+
 * {
   margin: 0;
   padding: 0;
