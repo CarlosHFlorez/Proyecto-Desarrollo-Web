@@ -260,7 +260,7 @@ body {
   transform: scale(1);
 }
 .Rrss-svg:hover {
-  filter: drop-shadow(0rem 0rem 1rem var(--Main-color) ;);
+  filter: drop-shadow(0rem 0rem 1rem var(--Main-color));
 }
 .Rrss-svg:active {
   transform: scale(1.1);
@@ -271,6 +271,9 @@ body {
   height: 3rem;
   margin-right: 3rem;
   display: none;
+}
+.Header-btn:active {
+  filter: drop-shadow(0rem 0rem 1rem var(--Main-color));
 }
 .Header-svg {
   margin-left: 3rem;

@@ -272,6 +272,9 @@ body {
   margin-right: 3rem;
   display: none;
 }
+.Header-btn:active {
+  filter: drop-shadow(0rem 0rem 1rem var(--Main-color));
+}
 .Header-svg {
   margin-left: 3rem;
   fill: var(--Texts);
@@ -426,6 +429,8 @@ body {
   position: relative;
 }
 .Lightbox-btn {
+  border-radius: 50%;
+
   position: absolute;
   top: 8%;
   right: 12.5%;
@@ -437,6 +442,9 @@ body {
   z-index: 2;
 }
 .Lightbox-btn:hover {
+  background-color: var(--Main-color);
+}
+.Lightbox-btn:active {
   transform: scale(1.2);
 }
 .Lightbox-svg {
