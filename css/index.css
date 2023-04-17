@@ -1,7 +1,8 @@
-/* INICIO RESET GLOBAL */
-
 @charset "UTF-8";
 
+/* INICIO RESET GLOBAL */
+
+/* Paleta de colores */
 :root {
   --Main-color: #f06135;
   --Background: #0f1108;
@@ -11,19 +12,22 @@
   --Secondary-gradient: rgba(236, 180, 28, 0.5);
   --Shadows: black;
 }
+/* Fin */
+
+/* Barra de scroll personalizada */
 ::-webkit-scrollbar {
   width: 0.625rem;
 }
-
 ::-webkit-scrollbar-track {
   background: var(--Borders);
 }
-
 ::-webkit-scrollbar-thumb {
   background: var(--Main-color);
   border-radius: 1rem;
 }
+/* Fin */
 
+/* Selector universal */
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +36,7 @@
   box-sizing: border-box;
   vertical-align: baseline;
 }
+/* Fin */
 
 /* Evitamos problemas con las imagenes */
 img,
@@ -43,6 +48,7 @@ figure {
   width: 100%;
   display: block;
 }
+/* Fin */
 
 /* Reseteamos los enlaces para funcionar como cajas... */
 a {
@@ -51,21 +57,25 @@ a {
   color: inherit;
   font-size: inherit;
 }
+/* Fin */
 
 /* ... excepto los que se encuentran en párrafos */
 p a {
   display: inline;
 }
+/* Fin */
 
 /* Quitamos los puntos de los <li> */
 li {
   list-style-type: none;
 }
+/* Fin */
 
 /* Configuramos anclas suaves */
 html {
   scroll-behavior: smooth;
 }
+/* Fin */
 
 /* Desactivamos estilos por defecto de las principales etiquetas de texto */
 h1,
@@ -89,6 +99,7 @@ em {
   text-decoration: none;
   color: inherit;
 }
+/* Fin */
 
 /* Evitamos problemas con los pseudoelementos de quotes */
 blockquote:before,
@@ -98,6 +109,7 @@ q:after {
   content: "";
   content: none;
 }
+/* Fin */
 
 /* Configuramos el texto que seleccionamos */
 ::-moz-selection {
@@ -108,6 +120,7 @@ q:after {
   background-color: var(--Main-color);
   color: var(--Texts);
 }
+/* Fin */
 
 /* Nivelamos problemas de tipografías y colocación de formularios */
 form,
@@ -129,6 +142,7 @@ label {
   -moz-appearance: none;
   appearance: none;
 }
+/* Fin */
 
 /* Reseteamos las tablas */
 table,
@@ -137,6 +151,7 @@ td {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* Fin */
 
 /* Evitamos problemas con los SVG */
 svg {
@@ -144,6 +159,7 @@ svg {
   display: block;
   fill: var(--Texts);
 }
+/* Fin */
 
 /* Configuramos la tipografía para toda la web */
 body {
@@ -153,22 +169,18 @@ body {
   font-weight: 400;
   background-color: #0f1108;
   color: var(--Texts);
-  /* opcional */
-  /* -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto; */
-  /* opcional */
-  font-smooth: always;
-  /* opcional */
-  -webkit-font-smoothing: antialiased;
-  /* opcional */
-  -moz-osx-font-smoothing: grayscale;
 }
+/* Fin */
+
 /* FIN RESET GLOBAL */
 
+/* Wrapper */
 .Wrapper {
   width: 80%;
 }
+/* Fin de Wrapper */
+
+/* Header */
 .Header {
   width: 100%;
   padding: 2rem 0;
@@ -208,6 +220,7 @@ body {
   align-items: center;
   gap: 5rem;
 }
+/* Menu de navegación */
 .Navmenu {
   display: flex;
   flex-flow: row nowrap;
@@ -239,6 +252,9 @@ body {
 }
 .Navmenu-a {
 }
+/* Fin de Menú de navegación */
+
+/* Redes sociales */
 .Rrss {
   display: flex;
   flex-flow: row nowrap;
@@ -264,19 +280,25 @@ body {
   transform: scale(1.1);
   fill: var(--Main-color);
 }
+/* Fin de Redes sociales */
+
+/* Botón menú hamburguesa */
 .Header-btn {
   width: 3rem;
   height: 3rem;
   margin-right: 3rem;
   display: none;
 }
-.Header-btn:active{
+.Header-btn:active {
   filter: drop-shadow(0rem 0rem 1rem var(--Main-color));
 }
 .Header-svg {
   margin-left: 3rem;
   fill: var(--Texts);
 }
+/* Fin de Botón de menú haamburguesa */
+
+/* Main */
 .Main {
   width: 100%;
   min-height: 200vh;
@@ -305,6 +327,8 @@ body {
   margin: auto;
   position: relative;
 }
+
+/* Hero */
 .Hero {
   width: 100%;
   min-height: 70vh;
@@ -363,6 +387,9 @@ body {
 .Hero-a:active {
   background: transparent;
 }
+/* Fin de Hero */
+
+/* Animación en Hero */
 @keyframes up {
   0% {
     opacity: 0;
@@ -373,7 +400,9 @@ body {
     transform: translateY(0vh);
   }
 }
+/* Fin de Animación en Hero */
 
+/* Galería de proyectos */
 .Galeria-section {
   margin: auto;
   max-width: 120rem;
@@ -514,7 +543,11 @@ body {
 .prev {
   left: 2%;
 }
+/* Fin de Galería de proyectos */
 
+/* Fin de Main */
+
+/* Footer y Contacto */
 .Footer {
   width: 100%;
   padding: 2rem 0;
@@ -564,6 +597,7 @@ body {
 .Mail-span:active {
   color: var(--Main-color);
 }
+/* Fin de Footer y contacto */
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 100rem) {
@@ -648,7 +682,7 @@ body {
     border-radius: 1rem;
 
     display: flex;
-    flex-direction: row wrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     gap: 3rem;
@@ -744,3 +778,4 @@ body {
     margin-bottom: 1.5rem;
   }
 }
+/* Fin de MEDIA QUERIES */

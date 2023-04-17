@@ -1,7 +1,6 @@
-/* INICIO RESET GLOBAL */
-
 @charset "UTF-8";
 
+/* INICIO RESET GLOBAL */
 :root {
   --Main-color: #f06135;
   --Background: #0f1108;
@@ -155,16 +154,6 @@ body {
   font-weight: 400;
   background-color: #0f1108;
   color: var(--Texts);
-  /* opcional */
-  /* -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto; */
-  /* opcional */
-  font-smooth: always;
-  /* opcional */
-  -webkit-font-smoothing: antialiased;
-  /* opcional */
-  -moz-osx-font-smoothing: grayscale;
 }
 /* FIN RESET GLOBAL */
 
@@ -660,7 +649,7 @@ body {
     border-radius: 1rem;
 
     display: flex;
-    flex-direction: row wrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     gap: 3rem;

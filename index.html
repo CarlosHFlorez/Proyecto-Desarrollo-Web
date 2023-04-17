@@ -22,6 +22,7 @@
   <body>
     <!-- Header, logo y menú de navegación -->
     <header class="Header">
+      <!-- Este div con su clase Wrapper es para ajustar el width libremente -->
       <div class="Header-wrapper Wrapper">
         <div class="Header-grp">
           <a href="/index.html" class="Header-logo" title="Inicio"><img src="assets/img/logo_web_name.png" alt="Logo" class="Header-img" /></a>
@@ -31,7 +32,9 @@
             </svg>
           </button>
         </div>
+        <!-- Este div es meramente para maquetar de forma responsive todo el Header en modo tablet y mobile -->
         <div class="Header-responsive">
+          <!-- Menú de navegación -->
           <nav class="Header-nav">
             <ul class="Header-ul Navmenu">
               <li class="Navmenu-li"><a href="index.html" class="Navmenu-a" title="Inicio">Inicio</a></li>
@@ -39,7 +42,9 @@
               <li class="Navmenu-li"><a href="about.html" class="Navmenu-a" title="Sobre mí">Sobre mí</a></li>
             </ul>
           </nav>
+          <!-- Redes sociales -->
           <ul class="Header-ul Rrss">
+            <!-- Linkedin -->
             <li class="Rrss-li">
               <a href="https://www.linkedin.com/" class="Rrss-a" title="Linkedin" target="_blank" rel="noreferer">
                 <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -47,6 +52,7 @@
                 </svg>
               </a>
             </li>
+            <!-- Facebook -->
             <li class="Rrss-li">
               <a href="https://es-es.facebook.com/" class="Rrss-a" title="Facebook" target="_blank" rel="noreferer">
                 <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -54,6 +60,7 @@
                 </svg>
               </a>
             </li>
+            <!-- Instagram -->
             <li class="Rrss-li">
               <a href="https://www.instagram.com/" class="Rrss-a" title="Instagram" target="_blank" rel="noreferer">
                 <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -61,6 +68,7 @@
                 </svg>
               </a>
             </li>
+            <!-- Twitter -->
             <li class="Rrss-li">
               <a href="https://twitter.com/?lang=es" class="Rrss-a" title="Twitter" target="_blank" rel="noreferer">
                 <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -68,6 +76,7 @@
                 </svg>
               </a>
             </li>
+            <!-- Youtube -->
             <li class="Rrss-li">
               <a href="https://www.youtube.com/" class="Rrss-a" title="Youtube" target="_blank" rel="noreferer">
                 <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" /></svg>
@@ -77,14 +86,15 @@
         </div>
       </div>
     </header>
-
+    <!-- Aquí comienza nuestro Main -->
     <main class="Main">
+      <!-- Este div contiene el video como background -->
       <div class="Main-container">
         <video class="Main-video" preload="none" loop muted autoplay playsinline>
           <source src="assets/video/Dragon_Age_Hero720_handBrake.mp4" type="video/mp4" />
         </video>
       </div>
-
+      <!-- Aquí están la propuesta de valor y una sencilla CTA -->
       <div class="Main-wrapper Wrapper">
         <section class="Main-section Hero">
           <p class="Hero-p">Hola, soy Carlos</p>
@@ -93,38 +103,44 @@
           <a href="about.html" class="Hero-a" title="Sobre mí">Sobre mí</a>
         </section>
       </div>
-
+      <!-- Esta es la sección con una galería rápida para visualizar los thumbnails de los proyectos -->
       <section class="Galeria-section Wrapper">
         <h2 class="Galeria-h2">Galería de Proyectos</h2>
-
+        <!-- Este div lo utilizo con un width del 200% para esconder la mitad del carrusel -->
         <div class="Galeria-container">
           <div class="Galeria-container-img">
+            <!-- Proyecto 1 -->
             <picture class="Galeria-picture">
               <source srcset="assets/img/posada-portrait.webp" type="image/webp" />
               <img src="assets/img/posada-portrait.jpg" alt="Posada" loading="lazy" class="Galeria-img" />
             </picture>
+            <!-- Proyecto 2 -->
             <picture class="Galeria-picture">
               <source srcset="assets/img/ripster-portrait.webp" type="image/webp" />
               <img src="assets/img/ripster-portrait.jpg" alt="Ripster" loading="lazy" class="Galeria-img" />
             </picture>
+            <!-- Proyecto 3 -->
             <picture class="Galeria-picture">
               <source srcset="assets/img/pistola-portrait.webp" type="image/webp" />
               <img src="assets/img/pistola-portrait.jpg" alt="Pistola" loading="lazy" class="Galeria-img" />
             </picture>
+            <!-- Proyecto 4 -->
             <picture class="Galeria-picture">
               <source srcset="assets/img/cofre-portrait.webp" type="image/webp" />
               <img src="assets/img/cofre-portrait.jpg" alt="Cofre" loading="lazy" class="Galeria-img" />
             </picture>
+            <!-- Proyecto 5 -->
             <picture class="Galeria-picture">
               <source srcset="assets/img/estatua-portrait.webp" type="image/webp" />
               <img src="assets/img/estatua-portrait.jpg" alt="Estatua" loading="lazy" class="Galeria-img" />
             </picture>
+            <!-- Proyecto 6 -->
             <picture class="Galeria-picture">
               <source srcset="assets/img/hachas-portrait.webp" type="image/webp" />
               <img src="assets/img/hachas-portrait.jpg" alt="Hachas" loading="lazy" class="Galeria-img" />
             </picture>
           </div>
-
+          <!-- Botones Anterior y Siguiente para movernos por el carrusel -->
           <button class="Galeria-arrow prev" title="Anterior">
             <svg class="Galeria-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
@@ -137,7 +153,7 @@
             </svg>
           </button>
         </div>
-
+        <!-- Botones con las páginas del carrusel, actualmente solamente 2 -->
         <ul class="Galeria-ul">
           <li class="Galeria-li">
             <button class="Galeria-btn" title="Primera página"></button>
@@ -146,24 +162,25 @@
             <button class="Galeria-btn" title="Segunda página"></button>
           </li>
         </ul>
-
+        <!-- Este div contiene un párrafo en el cuál se describe el software con el que trabajo y se proporcionan enlaces a las webs de cada programa -->
         <div class="Galeria-div">
           <p class="Galeria-p">El software con el que trabajo es <a href="https://www.autodesk.es/products/maya/overview?term=1-YEAR&tab=subscription" title="Maya" target="”_blank”" rel="noreferer" class="Galeria-a">Maya</a>, <a href="https://www.maxon.net/es/zbrush" title="Zbrush" target="”_blank”" rel="noreferer" class="Galeria-a">Zbrush</a> y <a href="https://www.adobe.com/products/substance3d-painter.html" title="Substance Painter" target="”_blank”" rel="noreferer" class="Galeria-a">Substance Painter</a> fundamentalmente, aunque si eres un estudio indie, estaré encantado de trabajar con <a href="https://www.blender.org/" title="Blender" target="”_blank”" rel="noreferer" class="Galeria-a">Blender</a> igualmente. Los renders de assets y personajes para videojuegos están hechos en <a href="https://marmoset.co/toolbag/" title="Marmoset Toolbag" target="”_blank”" rel="noreferer" class="Galeria-a">Marmoset Toolbag</a>, pueden ser visualizados junto con la descripción completa del proyecto en la sección de Portfolio.</p>
           <a href="portfolio.html" class="Galeria-portfolio-a" title="Portfolio">Ver Portfolio</a>
         </div>
       </section>
     </main>
-
+    <!-- Footer, contacto y Rrss -->
     <footer class="Footer">
       <div class="Footer-wrapper Wrapper">
         <span class="Copyright-span">Copyright © 2023 - Carlos Hernández Flórez</span>
-
+        <!-- Contacto -->
         <div class="Contacto-div">
           <span class="Contacto-span">Contacto:</span>
           <span class="Mail-span"><a href="mailto:" title="Contacto">carlos.cgdesigner@gmail.com</a></span>
         </div>
-
+        <!-- Redes sociales -->
         <ul class="Footer-ul Rrss">
+          <!-- Linkedin -->
           <li class="Rrss-li">
             <a href="https://www.linkedin.com/" class="Rrss-a" title="Linkedin" target="_blank" rel="noreferer">
               <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -171,6 +188,7 @@
               </svg>
             </a>
           </li>
+          <!-- Facebook -->
           <li class="Rrss-li">
             <a href="https://es-es.facebook.com/" class="Rrss-a" title="Facebook" target="_blank" rel="noreferer">
               <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -178,6 +196,7 @@
               </svg>
             </a>
           </li>
+          <!-- Instagram -->
           <li class="Rrss-li">
             <a href="https://www.instagram.com/" class="Rrss-a" title="Instagram" target="_blank" rel="noreferer">
               <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -185,6 +204,7 @@
               </svg>
             </a>
           </li>
+          <!-- Twitter -->
           <li class="Rrss-li">
             <a href="https://twitter.com/?lang=es" class="Rrss-a" title="Twitter" target="_blank" rel="noreferer">
               <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -192,6 +212,7 @@
               </svg>
             </a>
           </li>
+          <!-- Youtube -->
           <li class="Rrss-li">
             <a href="https://www.youtube.com/" class="Rrss-a" title="Youtube" target="_blank" rel="noreferer">
               <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" /></svg>
