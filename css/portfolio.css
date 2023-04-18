@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 /* INICIO RESET GLOBAL */
+
+/* Paleta de colores */
 :root {
   --Main-color: #f06135;
   --Background: #0f1108;
@@ -8,23 +10,24 @@
   --Texts: whitesmoke;
   --Gradient: #fff800;
   --Secondary-gradient: rgba(236, 180, 28, 0.5);
-  --Lightbox: rgba(240, 97, 53, 0.5);
   --Shadows: black;
 }
+/* Fin */
 
+/* Barra de scroll personalizada */
 ::-webkit-scrollbar {
   width: 0.625rem;
 }
-
 ::-webkit-scrollbar-track {
   background: var(--Borders);
 }
-
 ::-webkit-scrollbar-thumb {
   background: var(--Main-color);
   border-radius: 1rem;
 }
+/* Fin */
 
+/* Selector universal */
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +36,7 @@
   box-sizing: border-box;
   vertical-align: baseline;
 }
+/* Fin */
 
 /* Evitamos problemas con las imagenes */
 img,
@@ -44,6 +48,7 @@ figure {
   width: 100%;
   display: block;
 }
+/* Fin */
 
 /* Reseteamos los enlaces para funcionar como cajas... */
 a {
@@ -52,21 +57,25 @@ a {
   color: inherit;
   font-size: inherit;
 }
+/* Fin */
 
 /* ... excepto los que se encuentran en párrafos */
 p a {
   display: inline;
 }
+/* Fin */
 
 /* Quitamos los puntos de los <li> */
 li {
   list-style-type: none;
 }
+/* Fin */
 
 /* Configuramos anclas suaves */
 html {
   scroll-behavior: smooth;
 }
+/* Fin */
 
 /* Desactivamos estilos por defecto de las principales etiquetas de texto */
 h1,
@@ -90,6 +99,7 @@ em {
   text-decoration: none;
   color: inherit;
 }
+/* Fin */
 
 /* Evitamos problemas con los pseudoelementos de quotes */
 blockquote:before,
@@ -99,6 +109,7 @@ q:after {
   content: "";
   content: none;
 }
+/* Fin */
 
 /* Configuramos el texto que seleccionamos */
 ::-moz-selection {
@@ -109,6 +120,7 @@ q:after {
   background-color: var(--Main-color);
   color: var(--Texts);
 }
+/* Fin */
 
 /* Nivelamos problemas de tipografías y colocación de formularios */
 form,
@@ -130,6 +142,7 @@ label {
   -moz-appearance: none;
   appearance: none;
 }
+/* Fin */
 
 /* Reseteamos las tablas */
 table,
@@ -138,6 +151,7 @@ td {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* Fin */
 
 /* Evitamos problemas con los SVG */
 svg {
@@ -145,6 +159,7 @@ svg {
   display: block;
   fill: var(--Texts);
 }
+/* Fin */
 
 /* Configuramos la tipografía para toda la web */
 body {
@@ -155,11 +170,17 @@ body {
   background-color: #0f1108;
   color: var(--Texts);
 }
+/* Fin */
+
 /* FIN RESET GLOBAL */
 
+/* Wrapper */
 .Wrapper {
   width: 80%;
 }
+/* Fin de Wrapper */
+
+/* Header */
 .Header {
   width: 100%;
   padding: 2rem 0;
@@ -199,6 +220,7 @@ body {
   align-items: center;
   gap: 5rem;
 }
+/* Menú de navegación */
 .Navmenu {
   display: flex;
   flex-flow: row nowrap;
@@ -230,6 +252,9 @@ body {
 }
 .Navmenu-a {
 }
+/* Fin de Mené de navegación */
+
+/* Redes sociales */
 .Rrss {
   display: flex;
   flex-flow: row nowrap;
@@ -255,6 +280,9 @@ body {
   transform: scale(1.1);
   fill: var(--Main-color);
 }
+/* Fin de Redes sociales */
+
+/* botón menú hamburguesa */
 .Header-btn {
   width: 3rem;
   height: 3rem;
@@ -268,6 +296,11 @@ body {
   margin-left: 3rem;
   fill: var(--Texts);
 }
+/* Fin de Botón de menú hamburguesa */
+
+/* Fin de Header */
+
+/* Main */
 .Main {
   min-height: 135vh;
   overflow: hidden;
@@ -275,6 +308,8 @@ body {
 .Main-wrapper {
   margin: auto;
 }
+
+/* Proyectos */
 .Proyectos {
   width: 100%;
   min-height: 100vh;
@@ -376,6 +411,9 @@ body {
 
   pointer-events: none;
 }
+/* Fin de Proyectos */
+
+/* Lightbox */
 .Lightbox {
   width: 100%;
   min-height: 100vh;
@@ -496,7 +534,11 @@ body {
   border-radius: 1rem;
   text-shadow: 0 0 0.5rem var(--Shadows);
 }
+/* Fin de Lightbox */
 
+/* Fin de Main */
+
+/* Footer y Contacto */
 .Footer {
   width: 100%;
   padding: 2rem 0;
@@ -546,6 +588,7 @@ body {
 .Mail-span:active {
   color: var(--Main-color);
 }
+/* Fin de Footer y Contacto */
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 112.5rem) {
