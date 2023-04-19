@@ -21,6 +21,7 @@
   <body>
     <!-- Header, logo y menú de navegación -->
     <header class="Header">
+      <!-- Este div con su clase Wrapper es para ajustar el width libremente -->
       <div class="Header-wrapper Wrapper">
         <div class="Header-grp">
           <a href="/index.html" class="Header-logo" title="Inicio"><img src="assets/img/logo_web_name.png" alt="Logo" class="Header-img" /></a>
@@ -30,7 +31,9 @@
             </svg>
           </button>
         </div>
+        <!-- Este div es meramente para maquetar de forma responsive todo el Header en modo tablet y mobile -->
         <div class="Header-responsive">
+          <!-- Menú de navegación -->
           <nav class="Header-nav">
             <ul class="Header-ul Navmenu">
               <li class="Navmenu-li"><a href="index.html" class="Navmenu-a" title="Inicio">Inicio</a></li>
@@ -38,7 +41,9 @@
               <li class="Navmenu-li"><a href="about.html" class="Navmenu-a" title="Sobre mí">Sobre mí</a></li>
             </ul>
           </nav>
+          <!-- Redes sociales -->
           <ul class="Header-ul Rrss">
+            <!-- Linkedin -->
             <li class="Rrss-li">
               <a href="https://www.linkedin.com/" class="Rrss-a" title="Linkedin" target="_blank" rel="noreferer">
                 <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -46,6 +51,7 @@
                 </svg>
               </a>
             </li>
+            <!-- Facebook -->
             <li class="Rrss-li">
               <a href="https://es-es.facebook.com/" class="Rrss-a" title="Facebook" target="_blank" rel="noreferer">
                 <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -53,6 +59,7 @@
                 </svg>
               </a>
             </li>
+            <!-- Instagram -->
             <li class="Rrss-li">
               <a href="https://www.instagram.com/" class="Rrss-a" title="Instagram" target="_blank" rel="noreferer">
                 <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -60,6 +67,7 @@
                 </svg>
               </a>
             </li>
+            <!-- Twitter -->
             <li class="Rrss-li">
               <a href="https://twitter.com/?lang=es" class="Rrss-a" title="Twitter" target="_blank" rel="noreferer">
                 <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -67,6 +75,7 @@
                 </svg>
               </a>
             </li>
+            <!-- Youtube -->
             <li class="Rrss-li">
               <a href="https://www.youtube.com/" class="Rrss-a" title="Youtube" target="_blank" rel="noreferer">
                 <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" /></svg>
@@ -76,18 +85,21 @@
         </div>
       </div>
     </header>
-
+    <!-- Aquí comienza nuestro Main -->
     <main class="Main">
       <div class="Main-wrapper Wrapper">
         <div class="Main-about About">
+          <!-- Esta es la sección donde está toda la información -->
           <section class="About-columna">
             <h2 class="About-h2">Sobre mí</h2>
+            <!-- Este container es para colocar correctamente a About-span -->
             <div class="About-container">
               <span class="About-span">¿Quién soy?</span>
               <svg class="About-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" />
               </svg>
             </div>
+            <!-- Esta lista contiene cada una de las letras de mi nombre y apellidos para hacer un sencillo afecto con JS -->
             <ul class="Texto-ul isHidden">
               <li class="Texto-li visible">C</li>
               <li class="Texto-li invisible">a</li>
@@ -111,7 +123,7 @@
               <li class="Texto-li invisible">e</li>
               <li class="Texto-li invisible">z</li>
             </ul>
-
+            <!-- Este container alberga los párrafos con su animación -->
             <div class="Container-p">
               <p class="About-p">Soy un 3D Artist especializado en videojuegos y visualización de productos.</p>
               <p class="About-p">Trabajo tanto en entornos de baja como de alta poligonización y quiero ayudarte en tu proyecto tanto si eres empresa como freelance creando los assets y personajes que vayas necesitando.</p>
@@ -120,7 +132,7 @@
               <p class="About-p">¡No dudes en contactarme para pedirme un presupuesto y contarme más acerca de tu proyecto!</p>
             </div>
           </section>
-          
+          <!-- Esta es la foto de perfil -->
           <picture class="About-picture">
             <source srcset="assets/img/foto_perfil_big.webp" type="image/webp" />
             <img src="assets/img/foto_perfil_big.jpg" alt="Carlos Hernández Flórez" class="About-img About-columna" />
@@ -129,16 +141,18 @@
       </div>
     </main>
 
+    <!-- Footer, contacto y Rrss -->
     <footer class="Footer">
       <div class="Footer-wrapper Wrapper">
         <span class="Copyright-span">Copyright © 2023 - Carlos Hernández Flórez</span>
-
+        <!-- Contacto -->
         <div class="Contacto-div">
           <span class="Contacto-span">Contacto:</span>
           <span class="Mail-span"><a href="mailto:" title="Contacto">carlos.cgdesigner@gmail.com</a></span>
         </div>
-
+        <!-- Redes sociales -->
         <ul class="Footer-ul Rrss">
+          <!-- Linkedin -->
           <li class="Rrss-li">
             <a href="https://www.linkedin.com/" class="Rrss-a" title="Linkedin" target="_blank" rel="noreferer">
               <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -146,6 +160,7 @@
               </svg>
             </a>
           </li>
+          <!-- Facebook -->
           <li class="Rrss-li">
             <a href="https://es-es.facebook.com/" class="Rrss-a" title="Facebook" target="_blank" rel="noreferer">
               <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -153,6 +168,7 @@
               </svg>
             </a>
           </li>
+          <!-- Instagram -->
           <li class="Rrss-li">
             <a href="https://www.instagram.com/" class="Rrss-a" title="Instagram" target="_blank" rel="noreferer">
               <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -160,6 +176,7 @@
               </svg>
             </a>
           </li>
+          <!-- Twitter -->
           <li class="Rrss-li">
             <a href="https://twitter.com/?lang=es" class="Rrss-a" title="Twitter" target="_blank" rel="noreferer">
               <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -167,6 +184,7 @@
               </svg>
             </a>
           </li>
+          <!-- Youtube -->
           <li class="Rrss-li">
             <a href="https://www.youtube.com/" class="Rrss-a" title="Youtube" target="_blank" rel="noreferer">
               <svg class="Rrss-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" /></svg>

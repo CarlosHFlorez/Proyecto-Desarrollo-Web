@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 /* INICIO RESET GLOBAL */
+
+/* Paleta de colores */
 :root {
   --Main-color: #f06135;
   --Background: #0f1108;
@@ -11,7 +13,9 @@
   --Lightbox: rgba(240, 97, 53, 0.5);
   --Shadows: black;
 }
+/* Fin de Paleta de colores */
 
+/* Barra de scroll personalizada */
 ::-webkit-scrollbar {
   width: 0.625rem;
 }
@@ -24,7 +28,9 @@
   background: var(--Main-color);
   border-radius: 1rem;
 }
+/* Fin de barra de scroll personalizada */
 
+/* Selector universal */
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +39,7 @@
   box-sizing: border-box;
   vertical-align: baseline;
 }
+/* Fin de Selector universal */
 
 /* Evitamos problemas con las imagenes */
 img,
@@ -44,6 +51,7 @@ figure {
   width: 100%;
   display: block;
 }
+/* Fin */
 
 /* Reseteamos los enlaces para funcionar como cajas... */
 a {
@@ -52,21 +60,25 @@ a {
   color: inherit;
   font-size: inherit;
 }
+/* fin */
 
 /* ... excepto los que se encuentran en párrafos */
 p a {
   display: inline;
 }
+/* Fin */
 
 /* Quitamos los puntos de los <li> */
 li {
   list-style-type: none;
 }
+/* Fin */
 
 /* Configuramos anclas suaves */
 html {
   scroll-behavior: smooth;
 }
+/* Fin */
 
 /* Desactivamos estilos por defecto de las principales etiquetas de texto */
 h1,
@@ -90,6 +102,7 @@ em {
   text-decoration: none;
   color: inherit;
 }
+/* Fin */
 
 /* Evitamos problemas con los pseudoelementos de quotes */
 blockquote:before,
@@ -99,6 +112,7 @@ q:after {
   content: "";
   content: none;
 }
+/* Fin */
 
 /* Configuramos el texto que seleccionamos */
 ::-moz-selection {
@@ -109,6 +123,7 @@ q:after {
   background-color: var(--Main-color);
   color: var(--Texts);
 }
+/* Fin */
 
 /* Nivelamos problemas de tipografías y colocación de formularios */
 form,
@@ -130,6 +145,7 @@ label {
   -moz-appearance: none;
   appearance: none;
 }
+/* Fin */
 
 /* Reseteamos las tablas */
 table,
@@ -145,6 +161,7 @@ svg {
   display: block;
   fill: var(--Texts);
 }
+/* Fin */
 
 /* Configuramos la tipografía para toda la web */
 body {
@@ -155,11 +172,17 @@ body {
   background-color: var(--Background);
   color: var(--Texts);
 }
+/* Fin */
+
 /* FIN RESET GLOBAL */
 
+/* Wrapper */
 .Wrapper {
   width: 80%;
 }
+/* Fin de Wrapper */
+
+/* Header */
 .Header {
   width: 100%;
   padding: 2rem 0;
@@ -199,6 +222,7 @@ body {
   align-items: center;
   gap: 5rem;
 }
+/* Menú de navegación */
 .Navmenu {
   display: flex;
   flex-flow: row nowrap;
@@ -230,6 +254,9 @@ body {
 }
 .Navmenu-a {
 }
+/* Fin de Menú de navegación */
+
+/* Redes sociales */
 .Rrss {
   display: flex;
   flex-flow: row nowrap;
@@ -255,6 +282,7 @@ body {
   transform: scale(1.1);
   fill: var(--Main-color);
 }
+/* Fin de Redes sociales */
 .Header-btn {
   width: 3rem;
   height: 3rem;
@@ -268,6 +296,9 @@ body {
   margin-left: 3rem;
   fill: var(--Texts);
 }
+/* Fin de Header */
+
+/* Main */
 .Main {
   min-height: 100vh;
   overflow: hidden;
@@ -407,7 +438,9 @@ body {
   max-width: 0;
   padding-left: 0;
 }
+/* Fin de Main */
 
+/* Footer y Contacto */
 .Footer {
   width: 100%;
   padding: 2rem 0;
@@ -457,6 +490,7 @@ body {
 .Mail-span:active {
   color: var(--Main-color);
 }
+/* Fin de Footer y contacto */
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 112.5rem) {
