@@ -388,6 +388,9 @@ body {
 .Container-p > :nth-child(4) {
   animation-delay: 0.8s;
 }
+.Container-p > :nth-child(5) {
+  animation-delay: 1s;
+}
 @keyframes desdeIzq {
   0% {
     transform: translateX(-100%);
