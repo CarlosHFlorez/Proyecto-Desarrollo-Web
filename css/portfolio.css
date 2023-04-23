@@ -486,6 +486,9 @@ body {
   z-index: 2;
   display: none;
 }
+.Lightbox-fullscreen:active {
+  transform: scale(1.2);
+}
 .Lightbox-svg {
   width: 2rem;
   height: 2rem;
