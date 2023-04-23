@@ -480,7 +480,6 @@ body {
   top: 8%;
   left: 15%;
 
-  cursor: pointer;
   pointer-events: none;
 
   z-index: 2;
@@ -681,6 +680,7 @@ body {
   }
   .Lightbox-fullscreen {
     display: block;
+    cursor: pointer;
     pointer-events: auto;
   }
   .Lightbox-div.isRotated {
