@@ -381,6 +381,8 @@ body {
   background: var(--Background);
   border-radius: 1rem;
 
+  cursor: pointer;
+
   position: relative;
 
   opacity: 0.25;
