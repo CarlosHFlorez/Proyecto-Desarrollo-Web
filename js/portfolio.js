@@ -16,12 +16,10 @@ headerBtn.addEventListener(`click`, () => {
 //Seleccionamos los objetos implicados
 const proyectosImg = document.querySelectorAll(`.Proyectos-img`);
 const galeriaImg = document.querySelectorAll(`.Galeria-img`);
-const lightboxDiv = document.querySelector(`.Lightbox-div`);
 const lightboxImg = document.querySelector(`.Lightbox-img`);
 const lightboxArticle = document.querySelectorAll(`.Lightbox-article`);
 const lightbox = document.querySelector(`.Lightbox`);
 const lightboxBtn = document.querySelector(`.Lightbox-btn`);
-const lightboxFullscreen = document.querySelector(`.Lightbox-fullscreen`);
 const titlesH2 = document.querySelectorAll(`.Title-h2`);
 const lightboxH2 = document.querySelector(`.Lightbox-h2`);
 const softwareSpan = document.querySelectorAll(`.Software-span`);
@@ -44,23 +42,14 @@ proyectosImg.forEach((eachImg, i) => {
     let texto = extractoP[i].textContent;
     lightboxP.textContent = texto;
   });
-});
-//Al hacer click en la etiqueta .Lightbox-btn le quitamos la clase isActive a .Lightbox
-lightboxBtn.addEventListener(`click`, () => {
-  lightbox.classList.remove(`isActive`);
-  lightboxDiv.classList.remove(`isRotated`);
-  lightboxImg.classList.remove(`isRotated`);
-});
-//Al presionar la tecla Esc le quitamos la clase isActive a .Lightbox
-document.addEventListener(`keydown`, (esc) => {
-  if (esc.key === `Escape`) {
+  //Al hacer click en la etiqueta .Lightbox-btn le quitamos la clase isActive a .Lightbox
+  lightboxBtn.addEventListener(`click`, () => {
     lightbox.classList.remove(`isActive`);
-    lightboxDiv.classList.remove(`isRotated`);
-    lightboxImg.classList.remove(`isRotated`);
-  }
-});
-//Al hacer click en la etiqueta .Lightbox-fullscreen le añadimos la clase isRotated a .Lightbox-div
-lightboxFullscreen.addEventListener(`click`, () => {
-  lightboxDiv.classList.toggle(`isRotated`);
-  lightboxImg.classList.toggle(`isRotated`);
+  });
+  //Al presionar la tecla Esc le quitamos la clase isActive a .Lightbox
+  document.addEventListener(`keydown`, (esc) => {
+    if (esc.key === `Escape`) {
+      lightbox.classList.remove(`isActive`);
+    }
+  });
 });

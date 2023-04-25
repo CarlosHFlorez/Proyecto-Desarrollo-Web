@@ -462,7 +462,7 @@ body {
 
   position: absolute;
   top: 8%;
-  right: 15%;
+  right: 12.5%;
 
   cursor: pointer;
   transform: scale(1);
@@ -476,6 +476,7 @@ body {
 .Lightbox-btn:active {
   transform: scale(1.2);
 }
+<<<<<<< HEAD
 .Lightbox-fullscreen {
   position: absolute;
   top: 8%;
@@ -489,6 +490,8 @@ body {
 .Lightbox-fullscreen:active {
   transform: scale(1.2);
 }
+=======
+>>>>>>> parent of 57e0aea (Añadido fullscreen mobile en Portfolio)
 .Lightbox-svg {
   width: 2rem;
   height: 2rem;
@@ -616,6 +619,10 @@ body {
   }
 }
 @media screen and (max-width: 100rem) {
+  .Lightbox-btn {
+    top: 7%;
+    right: 13%;
+  }
 }
 @media screen and (max-width: 83rem) {
   .Proyectos {
@@ -633,12 +640,15 @@ body {
     align-items: center;
     gap: 2rem;
   }
+  .Lightbox-btn {
+    top: 6%;
+    right: 13%;
+  }
 }
 @media screen and (max-width: 64rem) {
   body {
     font-size: 85%;
   }
-
   .Lightbox-h2,
   .Lightbox-span-programas {
     font-size: 1.5rem;
@@ -679,6 +689,7 @@ body {
   body {
     font-size: 70%;
   }
+<<<<<<< HEAD
   .Lightbox-fullscreen {
     display: block;
     cursor: pointer;
@@ -704,6 +715,8 @@ body {
     border-radius: 0;
     object-fit: contain;
   }
+=======
+>>>>>>> parent of 57e0aea (Añadido fullscreen mobile en Portfolio)
   .Lightbox-h2,
   .Lightbox-span-programas {
     font-size: 1rem;
@@ -754,7 +767,10 @@ body {
     width: 3rem;
     height: 3rem;
   }
-
+  .Lightbox-btn {
+    top: 6%;
+    right: 15%;
+  }
   .Copyright-span,
   .Contacto-span,
   .Mail-span {
@@ -771,6 +787,10 @@ body {
   }
   .Proyectos-h2 {
     font-size: 2rem;
+  }
+  .Lightbox-btn {
+    top: 5%;
+    right: 14%;
   }
 }
 @media screen and (max-width: 24.375rem) {
@@ -789,5 +809,9 @@ body {
   .Header-ul.Rrss {
     gap: 0.5rem;
     margin-bottom: 1.5rem;
+  }
+  .Lightbox-btn {
+    top: 5%;
+    right: 14%;
   }
 }
