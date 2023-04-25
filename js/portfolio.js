@@ -42,14 +42,14 @@ proyectosImg.forEach((eachImg, i) => {
     let texto = extractoP[i].textContent;
     lightboxP.textContent = texto;
   });
-  //Al hacer click en la etiqueta .Lightbox-btn le quitamos la clase isActive a .Lightbox
-  lightboxBtn.addEventListener(`click`, () => {
+});
+//Al hacer click en la etiqueta .Lightbox-btn le quitamos la clase isActive a .Lightbox
+lightboxBtn.addEventListener(`click`, () => {
+  lightbox.classList.remove(`isActive`);
+});
+//Al presionar la tecla Esc le quitamos la clase isActive a .Lightbox
+document.addEventListener(`keydown`, (esc) => {
+  if (esc.key === `Escape`) {
     lightbox.classList.remove(`isActive`);
-  });
-  //Al presionar la tecla Esc le quitamos la clase isActive a .Lightbox
-  document.addEventListener(`keydown`, (esc) => {
-    if (esc.key === `Escape`) {
-      lightbox.classList.remove(`isActive`);
-    }
-  });
+  }
 });
